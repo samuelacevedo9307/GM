@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+*{  box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    border: solid red;
+}
+
+/* ---menu de navegacion---*/
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin: 60px;
+}
+
+.menu a {
+    color: #242E52;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0px 15px;
+    text-decoration: none;  
+}
+
+a:hover{ 
+        background-color: #8B48BF;
+        color:#FFFFFF;
+        width: 110px;
+        text-align: center;
+        border-radius: 25px;
+}
+
+button { 
+    border: none;
+    border-radius: 50px;
+    font-size: 13.18px;
+    padding: 10px;
+    width: 134px;
+    height: 44px;
+    color: #ffffff;
+    background-color: #8B48BF;
+}
+
+.fa-bars {
+    display: none;
+}
+
+button:hover{ 
+        background-color: #3CDDF3;
+        color:#FFFFFF;
+        text-align: center;
+        border-radius: 50px;
+}
+
+/*---main con contenedores principales---*/
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.section1 {
+    margin-right: 50px;
+    margin-top: 35px;
+}
+
+.section1 p{
+    color: black;
+    font-size: 16.5584px;
+    font-weight: 500;
+    width: 420px;
+    height: 71px;
+    padding-right: 3rem;
+    margin-bottom: 30px;
+}
+
+/*----main izquierdo---*/
+
+h1 { 
+    width: 500px;
+    height: 198px;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 66.47px;
+    margin-bottom: 40px;
+    color:#232C50;
+}
+
+/*--- segundo texto mas grande---*/
+
+.ventajas div p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    width: 340px;
+    height: 88px;
+    margin-left: 10px;
+    line-height: 145%;
+}
+
+h3 { 
+    color: #232851;
+    font-size: 36px;
+    font-weight: 700;
+    width: 433px;
+    margin-top: 100px;
+}
+
+/*---lado derecho main---*/
+
+.botonnumero {  
+    border-radius: 30px;
+    width: 69px;
+    height: 43px;
+    color: #ffffff;
+    background-color: #8B48BF;
+}
+
+.section3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.section3 div {
+    color: #323851;
+    font-weight: 700;
+    margin-left: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+
+.section3 div p {
+    color: #b3b2b7;
+    font-weight: 500;
+    height: 110px;
+    margin-left: 87px;
+    margin-right: 80px;
+    width: 437px;
+    text-align: justify;
+}
+
+.section4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----seccion de 3 perfiles---*/
+
+article {
+    color:#242E53;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 80px;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*---seccion de perfiles de usuario---*/
+
+.usuarios {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.usuarios div {
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.usuarios div img {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    bottom: 40px;
+}
+
+.usuarios div p {
+    color: #B9B9C1;
+    font-weight: 500;
+    width: 340px;
+    height: 78px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 156%;
+}
+
+h4 {
+    color: #3F4868;
+    font-weight: 700;
+    margin-top: -15px;
+}
+
+/*---section boton---*/
+
+.boton1 {
+    display: flex;
+    justify-content: center;
+}
+
+.boton2 {
+    background-color: rgba(139, 72, 191, 0.7);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    height: 44px;
+    margin-bottom: 120px;
+}
+
+.boton2:hover{ 
+    background-color: #3CDDF3;
+    color:#FFFFFF;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/*---seccion inferior con article---*/
+
+.inferior {
+    background-color:rgba(139, 72, 191, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inferior button{
+    color:rgba(139, 72, 191, 1);
+    background-color:rgba(255, 255, 255, 1);
+    Width: 250px;
+    height:90px;
+}
+
+.inferior button:hover { 
+    background-color: #3CDDF3;
+    color:#FFFFFF;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.inferior div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/*---footer---*/
+
+footer {
+    background-color:rgba(30, 30, 38, 1);
+    height: 247px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .redessociales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 122px;
+    align-items: center;
+}
+
+footer div span i{
+    color: rgba(255, 255, 255, 1);
+    margin-top: 80px;
+    padding: 0px 6px;
+}
+
+footer div .logo2{
+    height: 26px;
+    width: 145px;
+}
+
+/* ---enlaces del footer ----*/
+
+.navegacion1{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+
+.navegacion2{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+
+.navegacion1 a, .navegacion2 a{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    text-decoration: none;
+    margin: 6px 0px;
+}
+
+input{
+    border-radius: 50px;
+    height: 44px;
+    width: 201px;
+    padding-left: 10px;
+}
+
+.formulario p{
+    color: rgba(140, 140, 140, 1);
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 60px;
+    margin-left: 8px;
+}
+
+.formulario{
+    margin-right: 128px;
+    margin-top: 53px;
+}
+
+.formulario form button{
+    height: 42px;
+    margin-left: 9px;
+    width: 63px;
+}
+
+/* --- responsive mobile ----*/
+
+@media only screen and (min-width: 350px) and (orientation: portrait){
+
+    nav {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction:row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .usuarios{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
