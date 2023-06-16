@@ -1,11 +1,84 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Headlanding from "@/Components/headlanding";
-import Footer from "@/Components/footer";
+import Footer from "@/Components/Footer";
+import WalletConnect from "@/Components/ConnectionWallet";
+import {_mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters} from "../Components/FunctionsContract.js";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
 export default function Home() {
+  async function startMint(){
+    const result = await _mintNFT("Gm", "Phase 1","https://www.construyehogar.com/wp-content/uploads/2014/06/Plano-de-apartamento-peque%C3%B1o-moderno-Tiziana-Caroleo-en-Pinterest.jpg")
+    .then((e=>{
+      console.log(e);
+    }))
+    .catch((e=>{
+      console.log("Error = ", e);
+    }));
+    
+  }
+  async function SetActive(){
+    const result = await _setActive()
+    .then((e=>{
+      console.log(result);
+    }))
+    .catch((e=>{
+      console.log("Error = ", e);
+    }));
+    
+    
+  }
+  async function GetWalletTokens(){
+    const result = await _getwalletTokens()
+    .then((e=>{
+      console.log(e);
+      return(e)
+    }))
+    .catch((e=>{
+      console.log("Error = ", e);
+    }));
+    
+    
+  }
+
+  async function GetTokenMetadata(){
+    const result = await _getTokenMeta()
+    .then((e=>{
+      console.log(e);
+    }))
+    .catch((e=>{
+      console.log("Error = ", e);
+    }));
+  
+    
+  }
+  async function SetAddressForMint(){
+    const result = await _setAddressForMint()
+    .then((e=>{
+      console.log(e);
+    }))
+    .catch((e=>{
+      console.log("Error = ", e);
+    }));
+    
+    
+  }
+  async function GetMinters(){
+    const result = await _getMinters()
+    .then((e=>{
+      console.log(e);
+    }))
+    .catch((e=>{
+      console.log("Error = ", e);
+    }));
+    
+    
+  }
+
   return (
     <div>
       <Headlanding/>
@@ -18,7 +91,7 @@ export default function Home() {
           <a href="#">Careers</a>
           <a href="#">Community</a>
         </nav>
-        <button>Get Started</button>
+        <WalletConnect/>
         <i className="fa-sharp fa-solid fa-bars" />
       </header>
       {/*section izquierda con h1 texto-*/}
@@ -116,13 +189,14 @@ export default function Home() {
       {/*-seccion inferior con article-*/}
       <section className="inferior">
         <div className="menuInferior1">
-          <button>Get Started</button>
-          <button>Get Started</button>
+          <button onClick={startMint}>Mint</button>
+          <button onClick={GetWalletTokens}> Get Tokens</button>
         </div>
         <div className="menuInferior2">
-          <button>Get Started</button>
-          <button>Get Started</button>
-          <button>Get Started</button>
+          <button onClick={SetAddressForMint}>Set Address</button>
+          <button onClick={GetTokenMetadata}> Get Metadata</button>
+          <button onClick={SetActive}>Set Active</button>
+          <button onClick={GetMinters}>Get Minters</button>
         </div>
       </section>
       <section>
