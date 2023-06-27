@@ -44,7 +44,7 @@ const WalletConnect = () => {
   return (
     <div>
       {!isConnected ? (
-        <button onClick={connectToWeb3}>Conectar a la billetera</button>
+        <button onClick={connectToWeb3}>Conectar</button>
       ) : (
         <div>
           <p>Conectado a la billetera</p>

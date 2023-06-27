@@ -4,7 +4,9 @@
 export default function Footer() {
     return(
     <footer>
-        <div className="redessociales">
+      <div>
+        <img src="/images/Logo GM Finance.svg" alt="logotipo" />
+        <div className="redesSociales">
           <img className="logo2" src="img/logofinal.png" alt="logofinal" />
           <span className="redes">
             <a href="#"><i className="fa-brands fa-square-facebook" /></a>
@@ -14,28 +16,34 @@ export default function Footer() {
             <a href="#"><i className="fa-brands fa-instagram" /></a>
           </span>
         </div>
+      </div>
+        
         {/*-enlaces del footer*/}
         <div className="footer">
           <nav className="navegacion1">
-            <a href="#">Home</a>
-            <a href="#">Pricing</a>
-            <a href="#">Product</a>
-            <a href="#">About Us</a>
+            <h2>Menu</h2>
+            <a href="#">tokenizacion</a>
+            <a href="#">Ranking</a>
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Conectar Wallet</a>
           </nav>
         </div>
-        <div>
-          <nav className="navegacion2">
-            <a href="#">Careers</a>
-            <a href="#">Community</a>
-            <a href="#">Privacy policy</a>
+        <div className="footer">
+          <nav className="navegacion1">
+            <h2>Social</h2>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
           </nav>
         </div>
         <div className="formulario">
+          <h2>Suscribirse a nuestro sitio</h2>
           <form action="#" method="post">
-            <input type="email" name="email" autoComplete="off" placeholder="Update in your inbox..." />
-            <button>Go</button>
+            <input type="email" name="email" autoComplete="off" placeholder="Correo electronico" />
+            <button>Suscribirse</button>
+            <p>Copyrigth 2020. All Rights Reserved</p>
           </form>
-          <p>Copyrigth 2020. All Rights Reserved</p>
         </div>
       </footer>
       )

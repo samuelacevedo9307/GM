@@ -1,18 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 
 *{  box-sizing: border-box;
-    font-family: 'Be Vietnam Pro', sans-serif;
     border: solid red;
+    font-family:sans-serif;
 }
 
 /* ---menu de navegacion---*/
-
+body{
+    margin:20px;
+}
 header {
-    align-items: center;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
     margin-bottom: 40px;
-    margin: 60px;
+    margin: 50px;
+}
+header img {
+    text-transform: uppercase;
+    width: 35%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    text-transform: uppercase;
+}
+header button {
+    background-color: black;
 }
 
 .menu a {
@@ -22,30 +33,26 @@ header {
     padding: 0px 15px;
     text-decoration: none;  
 }
-
 a:hover{ 
-        background-color: #8B48BF;
+        background-color:RGB(00, 158, 72);
         color:#FFFFFF;
         width: 110px;
         text-align: center;
         border-radius: 25px;
 }
-
 button { 
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 13.18px;
     padding: 10px;
     width: 134px;
     height: 44px;
     color: #ffffff;
-    background-color: #8B48BF;
+    background-color: RGB(00, 158, 72);
 }
-
 .fa-bars {
     display: none;
 }
-
 button:hover{ 
         background-color: #3CDDF3;
         color:#FFFFFF;
@@ -59,32 +66,16 @@ main {
     display: flex;
     justify-content: center;
 }
-
-.section1 {
-    margin-right: 50px;
-    margin-top: 35px;
-}
-
-.section1 p{
-    color: black;
-    font-size: 16.5584px;
-    font-weight: 500;
-    width: 420px;
-    height: 71px;
-    padding-right: 3rem;
-    margin-bottom: 30px;
-}
-
-/*----main izquierdo---*/
-
 h1 { 
+    display: flex;
     width: 500px;
     height: 198px;
     font-size: 58px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 66.47px;
-    margin-bottom: 40px;
     color:#232C50;
+    font-family: 'Arial Black', Arial;
+    width: 50%;
 }
 
 /*--- segundo texto mas grande---*/
@@ -98,7 +89,6 @@ h1 {
     margin-left: 10px;
     line-height: 145%;
 }
-
 h3 { 
     color: #232851;
     font-size: 36px;
@@ -107,8 +97,89 @@ h3 {
     margin-top: 100px;
 }
 
-/*---lado derecho main---*/
-
+/*---seccion tokenizacion con informacion ---*/
+.section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+.section p{
+    color: black;
+    font-weight: bold;
+    width: 420px;
+    height: 71px;
+    text-align: center;
+}
+.section img {
+    display: flex;
+    width: 100%;
+}
+.section1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 320px;
+}
+.section1 h1{
+    margin-top: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100px;
+}
+.section1 h2{
+    margin-bottom: 100px;
+    width: 50%;
+}
+.section2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+.section2 div {
+    margin:15px;
+    text-align: center;
+    background-color: #fafafa;
+    width: 20%;
+}
+.section2 div img {
+    height: 70px;
+    position: relative;
+    bottom: 40px;
+}
+.section2 div p {
+    color: black;
+    font-weight: 500;
+    height: 78px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.section2 button {
+    margin-bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.servicio2 , .servicio4 {
+    padding-top: 50px;
+}
+.servicio1 button{
+    background-color: rgb(57, 175, 228);
+}
+.servicio2 button{
+    background-color: rgb(242, 134, 04);
+}
+.servicio3 button{
+    background-color: rgb(00, 158, 72);
+}
+.servicio4 button{
+    background-color: #918989b2;
+}
 .botonnumero {  
     border-radius: 30px;
     width: 69px;
@@ -117,44 +188,70 @@ h3 {
     background-color: #8B48BF;
 }
 
-.section3{
+/*----seccion de tokenizar con link de video ---*/
+.section3 {
+    height: 700px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow: auto;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.section3 div{
+    display: flex;
+    border-radius: 20px;
+    justify-content:flex-end;
+    align-items: flex-end;
+    margin: 25px;
+}
+.section3 h1 {
+    width: 100%;
+    height: 20px;
+    color: white;
+}
+.tokenizar {
+    background-color:rgb(19, 19, 19);
+    display: flex;
+    
+}
+.tokenizar1 , .tokenizar2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.section3 div {
-    color: #323851;
-    font-weight: 700;
-    margin-left: 15px; 
+.tokenizar1{
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    position: absolute;
+    left: 80px;
+    background-color: rgb(4,30,66);
+}
+.tokenizar2 {
     display: flex;
+    width: 55%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 50px;
+}
+.tokenizar2 h2 {
+    color: white;
+}
+.tokenizar2 button{
+    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    flex-direction: column;   
+    margin-right: 500px;
 }
-
-.section3 div p {
-    color: #b3b2b7;
-    font-weight: 500;
-    height: 110px;
-    margin-left: 87px;
-    margin-right: 80px;
-    width: 437px;
-    text-align: justify;
-}
-
 .section4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-
-/*----seccion de 3 perfiles---*/
 
 article {
     color:#242E53;
@@ -163,7 +260,6 @@ article {
     text-align: center;
     margin-top: 80px;
 }
-
 p {
     display: flex;
     align-items: center;
@@ -172,36 +268,51 @@ p {
 
 /*---seccion de perfiles de usuario---*/
 
-.usuarios {
+.usuario {
     display: flex;
     justify-content: space-around;
-    margin-top: 80px;
     margin-bottom: 50px;
     flex-wrap: wrap;
+    margin:80px;
+    border-radius: 15px;
 }
-
-.usuarios div {
+.usuario div {
     text-align: center;
-    background-color: #fafafa;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+    border-radius: 20px;
 }
-
-.usuarios div img {
-    width: 70px;
-    height: 70px;
+.usuario div button {
+    width: 80%;
+    height: 50px;
     position: relative;
     bottom: 40px;
+    margin-top: 50px;
+    color: black;
+    background-color: white;
 }
-
-.usuarios div p {
-    color: #B9B9C1;
+.usuario div p {
+    color: black;
     font-weight: 500;
-    width: 340px;
-    height: 78px;
-    margin-left: 10px;
-    margin-right: 10px;
-    line-height: 156%;
+    width: 90%;
+    height: 100%;
+    margin: 10px;
+    
 }
-
+.comentario1 , .comentario5 {
+    background-color: rgb(242, 134, 04);
+}
+.comentario2 , .comentario6 {
+    background-color: rgb(57, 175, 228);
+}
+.comentario3 , .comentario4 {
+    background-color: rgb(00, 158, 72);
+}
 h4 {
     color: #3F4868;
     font-weight: 700;
@@ -214,7 +325,6 @@ h4 {
     display: flex;
     justify-content: center;
 }
-
 .boton2 {
     background-color: rgba(139, 72, 191, 0.7);
     color: rgba(255, 255, 255, 1);
@@ -222,7 +332,6 @@ h4 {
     height: 44px;
     margin-bottom: 120px;
 }
-
 .boton2:hover{ 
     background-color: #3CDDF3;
     color:#FFFFFF;
@@ -230,35 +339,64 @@ h4 {
     border-radius: 50px;
 }
 
-/*---seccion inferior con article---*/
+/*---seccion inferior con preguntas frecuentes---*/
 
-.inferior {
-    background-color:rgba(139, 72, 191, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.inferior button{
-    color:rgba(139, 72, 191, 1);
-    background-color:rgba(255, 255, 255, 1);
-    Width: 250px;
-    height:90px;
-}
-
-.inferior button:hover { 
-    background-color: #3CDDF3;
-    color:#FFFFFF;
-    text-align: center;
-    border-radius: 50px;
-}
-
-.inferior div {
+.inferior h1{
+    width: 70%;
+    height: 20%;
+    border: 3px solid#cdd1d0;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.inferior button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #093b4d;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+
+/*---------------preguntasfrecuentes------------*/
+
+.pregunta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    height: 450px;
+}
+.pregunta div {
+    border: 3px solid #cdd1d0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.pregunta1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.pregunta2 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.botonMas {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    padding-right: 20px;
 }
 
 /*---footer---*/
@@ -268,25 +406,25 @@ footer {
     height: 247px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    color: white;
 }
-
 footer .redessociales{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 122px;
     align-items: center;
+    margin:40px;
 }
-
-footer div span i{
-    color: rgba(255, 255, 255, 1);
-    margin-top: 80px;
-    padding: 0px 6px;
-}
-
 footer div .logo2{
     height: 26px;
     width: 145px;
+}
+footer div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ---enlaces del footer ----*/
@@ -309,14 +447,12 @@ footer div .logo2{
     text-decoration: none;
     margin: 6px 0px;
 }
-
 input{
-    border-radius: 50px;
     height: 44px;
-    width: 201px;
+    border-radius: 50px;
+    width: 400px;
     padding-left: 10px;
 }
-
 .formulario p{
     color: rgba(140, 140, 140, 1);
     font-weight: 500;
@@ -324,46 +460,151 @@ input{
     margin-top: 60px;
     margin-left: 8px;
 }
-
 .formulario{
-    margin-right: 128px;
-    margin-top: 53px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
 }
-
 .formulario form button{
     height: 42px;
     margin-left: 9px;
-    width: 63px;
+    width: 80px;
 }
 
 /* --- responsive mobile ----*/
 
 @media only screen and (min-width: 350px) and (orientation: portrait){
-
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 300px;
+        width: 100%;
+    }
+    .pregunta {
+        padding: 5%;
+        width: 100%;
+        height: min-content;
+        background-color: #6b8994;
+        align-items: center;
+        justify-content: justify;
+        width: 100%;
+    }
+    .pregunta h1 {
+        text-align: center;
+        font-size: 50px;
+        color: #e2f6f1;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .pregunta h1 {
+        text-align: center;
+        font-size: 40px;
+        color: #e2f6f1;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
     nav {
         display: none;
     }
-
     main {
         display: flex;
         flex-direction:row-reverse;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
-
-    .usuarios{
+    .fondo {
+        display: none;
+    }
+    .section2{
+        margin-bottom: 150px;
+    }
+    .section2 , .section2 div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .section2 p {
+        width: 400px;
+        font-weight: bold;
+        color:#000;
+    }
+    .section3{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
-
+    .usuario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 200px;
+    }
+    .usuario div {
+        width: 400px;
+        font-weight: bold;
+        color: #000;
+    }
+    .tokenizar{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 200%;
+    }
+    .tokenizar1 {
+        display: block;
+        position: static;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    .tokenizar2{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding-right: 100px;
+    }
+    .tokenizar2 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+    }
     .section4 {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .inferior{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .redesSociales {
+        display: none;
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
     }
 }
 
