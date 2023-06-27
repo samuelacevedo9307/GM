@@ -1,10 +1,9 @@
 
 *{  box-sizing: border-box;
-    border: solid red;
-    font-family:sans-serif;
 }
 
 /* ---menu de navegacion---*/
+
 body{
     margin:20px;
 }
@@ -19,7 +18,7 @@ header {
 header img {
     text-transform: uppercase;
     width: 35%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-family: 'montserrat' ;
     text-transform: uppercase;
 }
 header button {
@@ -74,21 +73,12 @@ h1 {
     font-weight: 900;
     line-height: 66.47px;
     color:#232C50;
-    font-family: 'Arial Black', Arial;
+    font-family: 'Montserrat';
     width: 50%;
 }
 
 /*--- segundo texto mas grande---*/
 
-.ventajas div p {
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
-    width: 340px;
-    height: 88px;
-    margin-left: 10px;
-    line-height: 145%;
-}
 h3 { 
     color: #232851;
     font-size: 36px;
@@ -110,6 +100,7 @@ h3 {
     width: 420px;
     height: 71px;
     text-align: center;
+    font-family: 'Lora';
 }
 .section img {
     display: flex;
@@ -130,10 +121,12 @@ h3 {
     justify-content: center;
     width: 400px;
     height: 100px;
+    font-family: 'Montserrat';
 }
 .section1 h2{
     margin-bottom: 100px;
     width: 50%;
+    font-family: 'Lato';
 }
 .section2{
     display: flex;
@@ -145,19 +138,20 @@ h3 {
     margin:15px;
     text-align: center;
     background-color: #fafafa;
-    width: 20%;
+    width: 25%;
+    height: 300px;
 }
 .section2 div img {
-    height: 70px;
+    height: 80px;
     position: relative;
     bottom: 40px;
 }
 .section2 div p {
     color: black;
     font-weight: 500;
-    height: 78px;
-    margin-left: 10px;
-    margin-right: 10px;
+    height: 150px;
+    text-align: left;
+    font-family: 'Lora';
 }
 .section2 button {
     margin-bottom: 25px;
@@ -208,6 +202,7 @@ h3 {
     width: 100%;
     height: 20px;
     color: white;
+    font-family: 'Montserrat';
 }
 .tokenizar {
     background-color:rgb(19, 19, 19);
@@ -238,6 +233,7 @@ h3 {
 }
 .tokenizar2 h2 {
     color: white;
+    font-family: 'Lato';
 }
 .tokenizar2 button{
     display: flex;
@@ -252,7 +248,6 @@ h3 {
     justify-content: center;
     align-items: center;
 }
-
 article {
     color:#242E53;
     font-size: 40px;
@@ -264,6 +259,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Lora';
 }
 
 /*---seccion de perfiles de usuario---*/
@@ -302,7 +298,7 @@ p {
     width: 90%;
     height: 100%;
     margin: 10px;
-    
+    font-family: 'Lora';
 }
 .comentario1 , .comentario5 {
     background-color: rgb(242, 134, 04);
@@ -317,6 +313,7 @@ h4 {
     color: #3F4868;
     font-weight: 700;
     margin-top: -15px;
+    font-family: 'Lato';
 }
 
 /*---section boton---*/
@@ -351,6 +348,7 @@ h4 {
     text-align: center;
     align-items: center;
     margin: 20px;
+    font-family: 'Montserrat';
 }
 .inferior button {
     width: 100%;
@@ -370,13 +368,14 @@ h4 {
     flex-direction: column;
     flex-wrap: wrap;
     margin: 20px;
-    height: 450px;
+    height: 500px;
 }
 .pregunta div {
     border: 3px solid #cdd1d0;
     border-radius: 30px;
     display: flex;
     justify-content: space-around;
+    width: 50%;
 }
 .pregunta1 {
     display: flex;
@@ -434,13 +433,11 @@ footer div {
     flex-direction: column;
     margin: 50px 0px;
 }
-
 .navegacion2{
     display: flex;
     flex-direction: column;
     margin: 50px 0px;
 }
-
 .navegacion1 a, .navegacion2 a{
     color: rgba(255, 255, 255, 1);
     font-weight: 400;
@@ -459,6 +456,7 @@ input{
     font-size: 12px;
     margin-top: 60px;
     margin-left: 8px;
+    font-family: 'Lora';
 }
 .formulario{
     display: flex;
@@ -486,10 +484,12 @@ input{
         padding: 5%;
         width: 100%;
         height: min-content;
-        background-color: #6b8994;
         align-items: center;
         justify-content: justify;
         width: 100%;
+    }
+    .pregunta div {
+        border: 3px solid #cdd1d0;
     }
     .pregunta h1 {
         text-align: center;
@@ -497,6 +497,7 @@ input{
         color: #e2f6f1;
         font-weight: bold;
         margin-bottom: 30px;
+        font-family: 'Montserrat';
     }
     .pregunta h1 {
         text-align: center;
@@ -504,6 +505,7 @@ input{
         color: #e2f6f1;
         font-weight: bold;
         margin-bottom: 30px;
+        font-family: 'Montserrat';
     }
     nav {
         display: none;
@@ -526,13 +528,13 @@ input{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
         width: 100%;
     }
     .section2 p {
         width: 400px;
         font-weight: bold;
         color:#000;
+        font-family: 'Lora';
     }
     .section3{
         display: flex;
