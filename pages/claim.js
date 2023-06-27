@@ -25,7 +25,7 @@ export default function Home() {
       });
   }
   async function SetActive() {
-    const result = await _setActive()
+    const result = await _setActive(true)
       .then((e) => {
         console.log(result);
       })
@@ -97,7 +97,13 @@ export default function Home() {
               <p>Send your wallet for mint</p>
               <button onClick={SetAddressForMint}>Set</button>
             </div>
+            <div className="comentario1">
+              <h2>Set Active</h2>
+              <p>Active mint</p>
+              <button onClick={SetActive}>Set</button>
+            </div>
           </>
+          
         ) : (
           <>
             {!mintbool == true ? (

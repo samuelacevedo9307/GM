@@ -23,10 +23,10 @@ async function _mintNFT(name, description, imageURI,) {
   const result = await abi.methods.mint(name, description, imageURI).send({from:accounts[0]});
   return result;
 }
-async function _setActive (){
-    const accounts = await web3.eth.getAccounts();
-    const result = await abi.methods.setActive().send("true");
-    return result
+async function _setActive (_bool){
+  const accounts = await web3.eth.getAccounts();
+  const result = await abi.methods.setActive(_bool).send({ from: accounts[0] });
+  return result
   }
 async function _getwalletTokens (){
   const accounts = await web3.eth.getAccounts();
