@@ -10,7 +10,7 @@ body{
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     margin-bottom: 40px;
     margin: 50px;
@@ -22,6 +22,8 @@ header img {
     text-transform: uppercase;
 }
 header button {
+    width: 134px;
+    height: 44px;
     background-color: black;
 }
 
@@ -54,9 +56,13 @@ button {
 }
 button:hover{ 
         background-color: #3CDDF3;
-        color:#FFFFFF;
-        text-align: center;
-        border-radius: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 13.18px;
+        padding: 10px;
+        width: 134px;
+        height: 44px;
+        color: #ffffff;
 }
 
 /*---main con contenedores principales---*/

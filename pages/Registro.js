@@ -97,7 +97,7 @@ export default function Registro() {
       }
 
       alert("Usuario Creado Con Éxito");
-      router.push("/login");
+      router.push("/claim");
     } catch (error) {
       console.log(error.message);
       alert("Error en la solicitud: " + error.message);
