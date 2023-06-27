@@ -195,7 +195,7 @@
 						"type": "string"
 					}
 				],
-				"internalType": "struct MiNFT.NFTMetadata",
+				"internalType": "struct GmNft.NFTMetadata",
 				"name": "",
 				"type": "tuple"
 			}
@@ -504,6 +504,5 @@
 		"stateMutability": "nonpayable",
 		"type": "function"
 	}
-  ]
+ ]
 }
-

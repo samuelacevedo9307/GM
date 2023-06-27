@@ -9,7 +9,7 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
 
-const contractAddress = "0x1cD2b51A4EbeE363EA7faac523a243f6e2898D35";
+const contractAddress = "0x0E4a5E689f804380dD014b60244a3c5765e97B16";
 const contractAbi = MiNFT.abi;
 const abi = new web3.eth.Contract(contractAbi, contractAddress);
 
@@ -52,6 +52,8 @@ async function _setAddressForMint (){
   }
 
 async function _getMinters (){
+    const accounts = await web3.eth.getAccounts();
+    console.log("Owner = ", accounts[0]);
     const result = await abi.methods.getMinters().call();
     return result
   }
