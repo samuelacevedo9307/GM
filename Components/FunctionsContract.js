@@ -9,7 +9,7 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
 
-const contractAddress = "0x1a1B9057E7a7a6fd49232C543b1e06cf8f93336C";
+const contractAddress = "0xb5f998fcDD3c97c005eD840A249775fa6FBa3D19";
 const contractAbi = MiNFT.abi;
 const abi = new web3.eth.Contract(contractAbi, contractAddress);
 
