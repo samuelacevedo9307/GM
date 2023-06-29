@@ -10,7 +10,7 @@ export default function Headlanding() {
   const { data: session } = useSession();
   return (
     <>
-     <header>
+    <header>
         <img src="/images/LogoGmFinance.png" alt="logotipo" />
         <div></div>
         <nav className="menu">
@@ -44,6 +44,7 @@ export default function Headlanding() {
               </button>
             ) : (
               <>
+                <img src="/images/LogoGmFinance.png" alt="logotipo" />
                 <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
                   Crear cuenta
                 </button>

@@ -1,6 +1,6 @@
 
 *{  box-sizing: border-box;
-    border: solid 2px red;
+    
 }
 
 /* ---menu de navegacion---*/
@@ -26,6 +26,8 @@ header button {
     width: 134px;
     height: 44px;
     background-color: black;
+    border-radius: 15px;
+    margin: 0px 10px;
 }
 #botonPrincipal button {
     background-color: black;
@@ -40,8 +42,8 @@ header button {
 #botonPrincipal button i{
     font-size: 40px;
     position: absolute;
-    top:-2px;
-    left:0;
+    top: -2px;
+    left: 2px;
 }
 #preguntas div {
     display: flex;
@@ -50,7 +52,21 @@ header button {
     flex-direction: column;
     color: #000;
 }
-
+.login-container button {
+    color: #000;
+    font-weight: bold;
+    margin: 0px 10px;
+    border-radius: 15px;
+}
+.login-container a {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.login-container h2 {
+    display: flex;
+    justify-content: center;
+}
 /*--------   seccion de registro y Login ---------*/
 
 .botonRegistro {
@@ -62,7 +78,7 @@ header button {
 .botonRegistro button {
     border-top:#707A8A solid 2px !important ;
     background-color: transparent !important;
-    color: #000 ;
+    color: #000 !important;
     font-weight: bold;
     margin: 10px;
 }
@@ -394,6 +410,9 @@ p {
     flex-wrap: wrap;
     margin:80px;
     border-radius: 15px;
+}
+.usuario h2{
+    margin-top: 20px;
 }
 .usuario div {
     text-align: center;
