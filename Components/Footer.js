@@ -5,9 +5,8 @@ export default function Footer() {
     return(
     <footer>
       <div>
-        <img src="/images/Logo GM Finance.svg" alt="logotipo" />
+        <img src="/images/LogoGmFinance2.png" alt="logotipo" />
         <div className="redesSociales">
-          <img className="logo2" src="img/logofinal.png" alt="logofinal" />
           <span className="redes">
             <a href="#"><i className="fa-brands fa-square-facebook" /></a>
             <a href="#"><i className="fa-brands fa-youtube" /></a>
