@@ -86,7 +86,7 @@ export default function Home() {
         </nav>
         <WalletConnect/>
             <div id="botonPrincipal">
-                <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"></button>
+                <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><i class="bi bi-person-fill"></i></button>
             </div>
         <i className="fa-sharp fa-solid fa-bars" />
       </header>

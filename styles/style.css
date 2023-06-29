@@ -33,6 +33,15 @@ header button {
     border: #000 solid 2px;
     height: 50px;
     width: 50px;
+    position:relative;
+    overflow: hidden;
+    
+}
+#botonPrincipal button i{
+    font-size: 40px;
+    position: absolute;
+    top:-2px;
+    left:0;
 }
 #preguntas div {
     display: flex;
