@@ -1,118 +1,18 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Footer from "@/Components/Footer";
-import WalletConnect from "@/Components/ConnectionWallet";
 import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "../Components/FunctionsContract.js";
-import { useState } from "react";
-import Images from "next/image";
 import { useSession } from "next-auth/react";
-import { signOut } from "next-auth/react";
-import { signIn } from "next-auth/react";
-import Link from "next/link";
-import Registro from "./Registro.js";
-import LoginPage from "./login.js";
+import Headlanding from "@/Components/header.js";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { data: session } = useSession();
-  async function startMint() {
-    const result = await _mintNFT("Gm", "Phase 1", "https://www.construyehogar.com/wp-content/uploads/2014/06/Plano-de-apartamento-peque%C3%B1o-moderno-Tiziana-Caroleo-en-Pinterest.jpg")
-      .then((e) => {
-        console.log(e);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-  async function SetActive() {
-    const result = await _setActive()
-      .then((e) => {
-        console.log(result);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-  async function GetWalletTokens() {
-    const result = await _getwalletTokens()
-      .then((e) => {
-        console.log(e);
-        return e;
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-
-  async function GetTokenMetadata() {
-    const result = await _getTokenMeta()
-      .then((e) => {
-        console.log(e);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-  async function SetAddressForMint() {
-    const result = await _setAddressForMint()
-      .then((e) => {
-        console.log(e);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-  async function GetMinters() {
-    const result = await _getMinters()
-      .then((e) => {
-        console.log(e);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-
   return (
     <div>
-      <header>
-        <img src="/images/LogoGmFinance.png" alt="logotipo" />
-        <div></div>
-        <nav className="menu">
-          <a href="#">tokenizacion</a>
-          <a href="#">Ranking</a>
-          <a href="#">FAQ</a>
-        </nav>
-        <WalletConnect />
-        <div id="botonPrincipal">
-          <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
-            <i class="bi bi-person-fill"></i>
-          </button>
-        </div>
-        <i className="fa-sharp fa-solid fa-bars" />
-      </header>
-      <div className="registroLogin">
-        <div className="row">
-          <div className="col">
-            <div className="collapse multi-collapse" id="multiCollapseExample2">
-              <div className="botonRegistro">
-                <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
-                  Crear cuenta
-                </button>
-                <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
-                  Iniciar Sesión
-                </button>
-              </div>
-              <div className="collapse multi-collapse" id="multiCollapseExample3">
-                <Registro></Registro>
-              </div>
-              <div className="collapse multi-collapse" id="multiCollapseExample4">
-                <LoginPage></LoginPage>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Headlanding></Headlanding>
+      
       {/*------seccion carousel---------*/}
       <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
