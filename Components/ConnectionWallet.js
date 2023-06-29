@@ -47,8 +47,6 @@ const WalletConnect = () => {
         <button onClick={connectToWeb3}>Conectar</button>
       ) : (
         <div>
-          <p>Conectado a la billetera</p>
-          <p>Cuenta: {account}</p>
           <button onClick={disconnectFromWeb3}>Desconectar</button>
         </div>
       )}

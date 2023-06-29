@@ -15,6 +15,7 @@ function LoginPage() {
       redirect: false,
     });
 
+
     if (result?.error) {
       // handle sign-in error
       alert(result.error);
@@ -24,6 +25,8 @@ function LoginPage() {
     } else {
       // redirect to index page on successful sign-in
     }
+    location.reload();
+
   };
 
   return (
@@ -36,7 +39,7 @@ function LoginPage() {
             <input placeholder="Password" type="password" name="password" required />
             <button type="submit">Sign In</button>
           </form>
-          <Link href="/recuperar-contrasena">Olvidaste tu contraseña?</Link>
+          {/*<Link href="/recuperar-contrasena">Olvidaste tu contraseña?</Link>*/}
         </div>
       </div>
     </>
