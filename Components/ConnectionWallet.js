@@ -47,6 +47,7 @@ const WalletConnect = () => {
         <button onClick={connectToWeb3}>Conectar</button>
       ) : (
         <div>
+          <p>{account.slice(0, 7) +"..." + account.slice(35, 42)}</p>
           <button onClick={disconnectFromWeb3}>Desconectar</button>
         </div>
       )}

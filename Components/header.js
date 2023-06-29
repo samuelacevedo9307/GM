@@ -52,42 +52,13 @@ export default function Headlanding() {
   return (
     <>
       <header>
-        <img src="/images/LogoGmFinance.png" alt="logotipo" />
-        <div></div>
-        <nav className="menu">
-          <a href="#">tokenizacion</a>
-          <a href="#">Ranking</a>
-          <a href="#">FAQ</a>
-        </nav>
-        {!isConnected ? (
-          <>
-            <div id="botonPrincipal">
-              <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
-                <i class="bi bi-person-fill"></i>
-              </button>
-            </div>
-            <button onClick={connectToWeb3}>Conectar</button>
-          </>
-        ) : (
-          <>
-            <div id="botonPrincipal">
-              <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
-                <i class="bi bi-person-fill"></i>
-              </button>
-            </div>
-            <p>wallet: {account.slice(0, 7) + "..." + account.slice(35, 42)}</p>
-            <button onClick={disconnectFromWeb3}>Desconectar</button>
-          </>
-        )}
-
-        <i className="fa-sharp fa-solid fa-bars" />
-      </header>
-      <div className="registroLogin">
-        <div className="row ">
-          <div className="col d-flex justify-content-center align-items-center position-relative">
-            <div className="collapse multi-collapse" id="multiCollapseExample2">
-              <img src="/images/LogoGmFinance.png" alt="logotipo" />
-              <br></br>
+        <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
+          <div className="offcanvas-header">
+            <img src="/images/LogoGmFinance.png" alt="logotipo" width={300} />
+            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div className="offcanvas-body">
+            <div className="col ">
               <div className="botonRegistro">
                 {session ? (
                   <button
@@ -101,27 +72,57 @@ export default function Headlanding() {
                   </button>
                 ) : (
                   <>
-                    <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                    <button className="botonLogin" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-controls="multiCollapseExample3" aria-expanded="false" aria-label="Toggle navigation">
                       Crear cuenta
                     </button>
-                    <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    <button className="botonLogin" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-controls="multiCollapseExample4" aria-expanded="false" aria-label="Toggle navigation">
                       Iniciar Sesión
                     </button>
                   </>
                 )}
               </div>
-            </div>
-          </div>
-          <div id="miContenedorPadre">
-            <div className="collapse multi-collapse" id="multiCollapseExample3" data-parent="#miContenedorPadre">
-              <Registro></Registro>
-            </div>
-            <div className="collapse multi-collapse" id="multiCollapseExample4" data-parent="#miContenedorPadre">
-              <LoginPage></LoginPage>
+              <div id="miContenedorPadre">
+                <div className="collapse multi-collapse" id="multiCollapseExample3" data-bs-parent="#miContenedorPadre">
+                  <Registro></Registro>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample4" data-bs-parent="#miContenedorPadre">
+                  <LoginPage></LoginPage>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <img src="/images/LogoGmFinance.png" alt="logotipo" />
+        <div></div>
+        <nav className="menu">
+          <a href="#">tokenizacion</a>
+          <a href="#">Ranking</a>
+          <a href="#">FAQ</a>
+        </nav>
+
+        {!isConnected ? (
+          <>
+            <button onClick={connectToWeb3}>Conectar</button>
+            <div id="botonPrincipal">
+              <button className="btn btn-primary" type="button" id="offcanvasToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <i class="bi bi-person-fill"></i>
+              </button>
+            </div>
+          </>
+        ) : (
+          <>
+            <p>wallet: {account.slice(0, 7) + "..." + account.slice(35, 42)}</p>
+            <button onClick={disconnectFromWeb3}>Desconectar</button>
+            <div id="botonPrincipal">
+              <button className="btn btn-primary" type="button" id="offcanvasToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <i class="bi bi-person-fill"></i>
+              </button>
+            </div>
+          </>
+        )}
+
+        <i className="fa-sharp fa-solid fa-bars" />
+      </header>
     </>
   );
 }

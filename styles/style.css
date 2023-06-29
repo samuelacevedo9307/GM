@@ -72,8 +72,8 @@ header button {
 .botonRegistro {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .botonRegistro button {
     border-top:#707A8A solid 2px !important ;

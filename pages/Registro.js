@@ -105,7 +105,7 @@ export default function Registro() {
   };
   return (
     <>
-    <form className="menuRegistro" onSubmit={handleSubmit}>
+    <form className="" onSubmit={handleSubmit}>
       <div>
         <label><i className="bi bi-envelope-plus"></i> Nombre completo:</label>
         <br />
@@ -180,10 +180,10 @@ export default function Registro() {
           <div className="boolean">
             <br />
             <label>
-              <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <p type="button">
                 Declaración de veracidad: &nbsp;&nbsp;&nbsp;&nbsp;
               </p>
-              <input type="checkbox" checked={ver} onChange={(e) => setver(e.target.value)} />
+              <input type="checkbox" checked={ver} onChange={(e) => setver(e.target.checked)} />
               <span className="checkmark"></span>
             </label>
             <br />
