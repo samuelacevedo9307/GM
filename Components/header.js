@@ -32,26 +32,27 @@ export default function Headlanding() {
           <div className="col">
             <div className="collapse multi-collapse" id="multiCollapseExample2">
               <div className="botonRegistro">
-                {session ? (
-                  <button
-                    className="hbuton2"
-                    onClick={() => {
-                      signOut();
-                    }}
-                    type="button"
-                  >
-                    LOG OUT
-                  </button>
-                ) : (
-                  <>
-                    <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
-                      Crear cuenta
-                    </button>
-                    <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
-                      Iniciar Sesión
-                    </button>
-                  </>
-                )}
+              {session ? (
+              <button
+                className="hbuton2"
+                onClick={() => {
+                  signOut();
+                }}
+                type="button"
+              >
+                LOG OUT
+              </button>
+            ) : (
+              <>
+                <img src="/images/LogoGmFinance.png" alt="logotipo" />
+                <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                  Crear cuenta
+                </button>
+                <button className="botonLogin" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                  Iniciar Sesión
+                </button>
+              </>
+            )}
               </div>
               <div id="miContenedorPadre">
                 <div className="collapse multi-collapse" id="multiCollapseExample3" data-parent="#miContenedorPadre">
