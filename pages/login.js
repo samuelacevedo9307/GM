@@ -9,23 +9,20 @@ function LoginPage() {
     event.preventDefault();
 
     const { email, password } = event.target.elements;
+    try{
     const result = await signIn("credentials", {
       email: email.value,
       contrasena: password.value,
       redirect: false,
     });
-
-
-    if (result?.error) {
-      // handle sign-in error
-      alert(result.error);
-    } else if (result?.url) {
-      // redirect to sign-in URL if it exists
-     
-    } else {
-      // redirect to index page on successful sign-in
-      router.push("/dashboard");
+    if (!result.ok) {
+      throw new Error(result.error);
     }
+    router.push("/dashboard");
+  }catch(error){
+    console.log(error.message);
+    alert("Error en la solicitud: " + error.message);
+  }
     
 
   };
