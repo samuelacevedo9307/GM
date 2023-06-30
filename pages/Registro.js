@@ -203,7 +203,6 @@ export default function Registro() {
                 </label>
                 <br />
                 <input type="text" id="pfondos" name="pfondos" value={pfondos} onChange={(e) => setpfondos(e.target.value)} />
-
                 <div className="boolean">
                   <div className="boolean">
                     <br />
@@ -214,21 +213,23 @@ export default function Registro() {
                     </label>
                     <br />
                     <label>
-                      <p type="button" >
+                      <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Acepto las política de tratamiento de datos personales: &nbsp;&nbsp;&nbsp;&nbsp;
                       </p>
                       <input type="checkbox" checked={aceptaTratamientoDatos} onChange={(e) => setAceptaTratamientoDatos(e.target.checked)} />
                       <span className="checkmark"></span>
                     </label>
                     <br />
+                    
                     <label>
-                      <p type="button">
+                      <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                         Acepto los términos y condiciones: &nbsp;&nbsp;&nbsp;&nbsp;
                       </p>
                       <input type="checkbox" checked={aceptaTerminosCondiciones} onChange={(e) => setAceptaTerminosCondiciones(e.target.checked)} />
                       <span className="checkmark"></span>
                     </label>
                     <br />
+                    
                   </div>
                 </div>
               </div>
