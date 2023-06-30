@@ -93,7 +93,10 @@ export default function Headlanding() {
             </div>
           </div>
         </div>
-        <img src="/images/LogoGmFinance.png" alt="logotipo" />
+        <Link className="text-white" href={`/`} passHref legacyBehavior>
+          <a><img src="/images/LogoGmFinance.png" alt="logotipo" /></a>
+        </Link>
+
         <div></div>
         <nav className="menu">
           <a href="#">tokenizacion</a>

@@ -1,121 +1,73 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import Headlanding from "@/Components/headlanding";
-import Footer from "@/Components/Footer";
-import WalletConnect from "@/Components/ConnectionWallet";
-import {_mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters} from "../Components/FunctionsContract.js";
-import { useState } from "react";
-import Images from "next/image";
-
+import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "../Components/FunctionsContract.js";
+import { useEffect } from "react";
+import React from "react";
+import Container from "@/Components/Container.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export default function Home() {
-  const [adressbool, setadressbool] = useState(false);
-  const [mintbool, setmintbool] = useState(false);
-  async function startMint(){
-    const result = await _mintNFT("Gm", "Phase 1","https://www.construyehogar.com/wp-content/uploads/2014/06/Plano-de-apartamento-peque%C3%B1o-moderno-Tiziana-Caroleo-en-Pinterest.jpg")
-    .then((e=>{
-      console.log(e);
-    }))
-    .catch((e=>{
-      console.log("Error = ", e);
-    }));
-    setmintbool(true)
+  useEffect(() => {
+    const ctx = document.getElementById("myChart");
+    const existingChart = Chart.getChart(ctx);
+    $(document).ready(function() {
+      var currentActive = $(".active");
+      var dash = $(".dash");
     
-  }
-  async function SetActive(){
-    const result = await _setActive()
-    .then((e=>{
-      console.log(result);
-    }))
-    .catch((e=>{
-      console.log("Error = ", e);
-    }));
+      if (!currentActive.is(dash)) {
+        dash.addClass("active");
+        currentActive.removeClass("active");
+      }
+    });
     
-    
-  }
-  async function GetWalletTokens(){
-    const result = await _getwalletTokens()
-    .then((e=>{
-      console.log(e);
-      return(e)
-    }))
-    .catch((e=>{
-      console.log("Error = ", e);
-    }));
-    
-    
-  }
 
-  async function GetTokenMetadata(){
-    const result = await _getTokenMeta()
-    .then((e=>{
-      console.log(e);
-    }))
-    .catch((e=>{
-      console.log("Error = ", e);
-    }));
-  
-    
-  }
-  async function SetAddressForMint(){
-    const result = await _setAddressForMint()
-    .then((e=>{
-      console.log(e);
-    }))
-    .catch((e=>{
-      console.log("Error = ", e);
-    }));
-    setadressbool(true)
-    
-  }
-  async function GetMinters(){
-    const result = await _getMinters()
-    .then((e=>{
-      console.log(e);
-    }))
-    .catch((e=>{
-      console.log("Error = ", e);
-    }));
-    
-    
-  }
+    if (existingChart) {
+      existingChart.destroy();
+    }
+    const plugin = {
+      id: "customCanvasBackgroundColor",
+      beforeDraw: (chart, args, options) => {
+        const { ctx } = chart;
+        ctx.save();
+        ctx.globalCompositeOperation = "destination-over";
+        ctx.fillStyle = options.color || "#99ffff";
+        ctx.fillRect(0, 0, chart.width, chart.height);
+        ctx.restore();
+      },
+    };
+
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["2017-1", "2017-2", "2017-3", "2017-4", "2017-5", "2017-6"],
+        datasets: [
+          {
+            label: false,
+            data: [500, 1250, 900, 1700, 800, 2000],
+            borderWidth: 1,
+            borderColor: "rgb(225,0,0)",
+            backgroundColor: "rgb(0,0,0,0.1)",
+            fill: "origin",
+            pointRadius: 0, // 0: fill to 'origin'
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          customCanvasBackgroundColor: {
+            color: "lightGreen",
+          },
+        },
+        plugins: [plugin],
+      },
+    });
+  }, []);
 
   return (
-    <div>
-      <Headlanding/>
-      <header>
-        <img src="/images/Logo GM Finance.svg" alt="logotipo" />
-        <div></div>
-        <nav className="menu">
-          <a href="#">tokenizacion</a>
-          <a href="#">Ranking</a>
-          <a href="#">FAQ</a>
-        </nav>
-        <WalletConnect/>
-        <i className="fa-sharp fa-solid fa-bars" />
-      </header>
-     
-      <section className="usuario">
-        <div className="comentario1">
-          <h2>Set active</h2>
-          <p>Activar Mint</p>
-          <button onClick={SetActive}>set</button>
-        </div>
-        <div className="comentario1">
-          <h2>Get Minters</h2>
-          <p>Get wallet of minters</p>
-          <button onClick={GetMinters}>Get</button>
-        </div>
-        
-        
+    <Container>
+      <section id="dash">
+        <canvas id="myChart"></canvas>
       </section>
-     
-
-      <Footer />
-    </div>
+    </Container>
   );
 }
