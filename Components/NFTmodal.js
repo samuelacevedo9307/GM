@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Nftmodal() {
   const [adressbool, setadressbool] = useState(false);
   const [mintbool, setmintbool] = useState(false);
   async function startMint() {
@@ -57,7 +57,7 @@ export default function Home() {
     const result = await _setAddressForMint()
       .then((e) => {
         console.log(e);
-        setadressbool(false);
+        setadressbool(true);
         setmintbool(false);
       })
       .catch((e) => {
@@ -73,62 +73,56 @@ export default function Home() {
         console.log("Error = ", e);
       });
   }
-
   return (
-    <div>
-      <Headlanding />
-      <header>
-        <img src="/images/Logo GM Finance.svg" alt="logotipo" />
-        <div></div>
-        <nav className="menu">
-          <a href="#">tokenizacion</a>
-          <a href="#">Ranking</a>
-          <a href="#">FAQ</a>
-        </nav>
-        <WalletConnect />
-        <i className="fa-sharp fa-solid fa-bars" />
-      </header>
-
-      <section className="usuario">
-        {!adressbool ? (
-          <>
-            <div className="comentario1">
-              <h2>Set Address</h2>
-              <p>Send your wallet for mint</p>
-              <button onClick={SetAddressForMint}>Set</button>
+    <>
+      <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="miModalLabel">
+                Get your Nft
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-          </>
-          
-        ) : (
-          <>
-            {!mintbool == true ? (
-              <>
-                <div className="comentario1">
-                  <h2>Claim</h2>
-                  <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/08/bored_ape_yacht_club.jpeg-1.jpg" alt="logotipo" />
-                  <p>Get your Nft</p>
-                  <button onClick={startMint}>Mint</button>
+            <div class="modal-body">
+              {!adressbool  && !mintbool ?(
+                <div className="usuario">
+                  <div className="comentario1">
+                    <h2>Set Address</h2>
+                    <p>Send your wallet for mint</p>
+                    <button onClick={SetAddressForMint}>Set</button>
+                  </div>
                 </div>
-              </>
-            ) : (
-              <>
-                <div className="comentario1">
-                  <h2>Congrats</h2>
-                  <p>you Mint successfuly</p>
-                  <Link href={`/`}>
-                    <button className="" type="button">
-                      Volver al Inicio
-                    </button>
-                  </Link>
-                </div>
-              </>
-            )}
-          </>
-        )}
-      </section>
-
-      <Footer />
-    </div>
+              ) : (
+                <>
+                  {!mintbool == true ? (
+                    <div className="usuario">
+                      <div className="comentario1">
+                        <h2>Claim</h2>
+                        <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/08/bored_ape_yacht_club.jpeg-1.jpg" width={130} alt="logotipo" />
+                        <p>Get your Nft</p>
+                        <button onClick={startMint}>Mint</button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="usuario">
+                      <div className="comentario1">
+                        <h2>Congrats</h2>
+                        <p>you Mint successfuly</p>
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

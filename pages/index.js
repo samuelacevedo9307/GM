@@ -4,6 +4,7 @@ import Footer from "@/Components/Footer";
 import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "../Components/FunctionsContract.js";
 import { useSession } from "next-auth/react";
 import Headlanding from "@/Components/header.js";
+import Nftmodal from "@/Components/NFTmodal.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -327,6 +328,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Nftmodal/>
     </div>
   );
 }
