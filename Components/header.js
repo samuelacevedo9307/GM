@@ -2,6 +2,7 @@ import Head from "next/head";
 import WalletConnect from "@/Components/ConnectionWallet";
 import React, { useState, useEffect } from "react";
 import Web3 from "web3";
+import Link from "next/link";
 
 import Registro from "@/pages/Registro.js";
 import LoginPage from "@/pages/login.js";
@@ -98,6 +99,15 @@ export default function Headlanding() {
           <a href="#">tokenizacion</a>
           <a href="#">Ranking</a>
           <a href="#">FAQ</a>
+          {!isConnected ? (
+            <></>
+          ) : (
+            <>
+              <Link className="text-white" href={`/dashboard`} passHref legacyBehavior>
+                <a href="#">dashboard</a>
+              </Link>
+            </>
+          )}
         </nav>
 
         {!isConnected ? (

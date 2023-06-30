@@ -80,7 +80,7 @@ export default function Nftmodal() {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="miModalLabel">
-                Get your Nft
+                Get your Reward
               </h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
