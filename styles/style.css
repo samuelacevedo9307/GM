@@ -72,8 +72,8 @@ header button {
 .botonRegistro {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items:center;
 }
 .botonRegistro button {
     border-top:#707A8A solid 2px !important ;
@@ -758,5 +758,100 @@ input{
         align-items: center;
     }
 }
-
-
+  .login-container form {
+    display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+  }
+  
+  /* Estilo para los campos de entrada de texto */
+  .login-container input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    color: #093b4d;
+    margin: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el botón de enviar */
+  .login-container button[type="submit"] {
+    color: #fff;
+    background-color: #093b4d;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .registro-container form {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 82%;
+  }
+  .registro-container .form_container {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .registro-container input{
+    padding: 10px;
+    color: #093b4d;
+    margin: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .registro-container select{
+    padding: 10px;
+    color: #093b4d;
+    margin: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el botón de enviar */
+  .registro-container button[type="submit"] {
+    color: #fff;
+    background-color: #093b4d;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el contenedor principal */
+  .registro-container .form_container {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  
