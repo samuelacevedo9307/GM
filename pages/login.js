@@ -21,11 +21,12 @@ function LoginPage() {
       alert(result.error);
     } else if (result?.url) {
       // redirect to sign-in URL if it exists
-      router.push("/");
+     
     } else {
       // redirect to index page on successful sign-in
+      router.push("/dashboard");
     }
-    location.reload();
+    
 
   };
 
