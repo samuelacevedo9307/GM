@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: blue solid 2px;
+  border: solid 2px blue;
 }
 
 /* ---menu de navegacion---*/
@@ -168,12 +168,14 @@ main button {
   color: #000;
   font-weight: bold;
 }
-main a {
-  display: flex;
-  height: 100px;
-  margin-top: 400px;
+.banner a {
+  background-color: #1B1A20;
+  height: 50px;
+  width: 100px;
 }
-
+.banner{
+  position: relative;
+}
 h1 {
   display: flex;
   width: 500px;
@@ -204,6 +206,7 @@ h3 {
   align-items: center;
   width: 100%;
   text-align: center;
+  height: 100%;
 }
 .section div {
   display: flex;
@@ -610,8 +613,9 @@ input {
   border-radius: 15px;
 }
 
+/* ------------------------------------ responsive para resoluciones altas --------------------------------------------------------*/
 /* ---------------------------------- responsive mobile ----------------------------------------------------------------------------*/
-@media only screen and (max-width: 900px) and (orientation: portrait) {
+@media only screen and (max-width: 350px) and (orientation: portrait) {
   .section img {
     display: none;
   }
@@ -625,9 +629,8 @@ input {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding-left: 490px;
+    padding-left: 400px;
   }
-}
   main div {
     display: flex;
     justify-content:space-between;
@@ -635,7 +638,6 @@ input {
     width: 100%;
   }
   main a {
-    margin-top: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -648,7 +650,11 @@ input {
     align-items: center;
     justify-content: center;
   }
-@media only screen and (min-width: 360px) and (orientation: portrait) {
+}
+body {
+  width: 100%;
+}
+@media only screen and (min-width: 350px) and (orientation: portrait) {
   
   .pregunta {
     padding: 5%;
@@ -691,22 +697,31 @@ input {
   }
   .section2 {
     margin-bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+
   }
-  .section2,
   .section2 div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 400px;
     margin-top: 100px;
   }
   .section2 p {
     width: 400px;
     font-weight: bold;
+    font-size: large;
     color: #000;
     font-family: "Lora";
   }
+  .servicio1 button  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  
   .section3 {
     display: flex;
     flex-direction: column;
@@ -719,13 +734,14 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 200px;
     width: 100%;
+    
   }
   .usuario div {
-    width: 400px;
+    width: 350px;
     font-weight: bold;
     color: #000;
   }
@@ -775,13 +791,13 @@ input {
   .redesSociales {
     display: none;
   }
-  footer {
+footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
     align-items: center;
   }
-}
+
 .login-container form {
   display: flex;
 
@@ -967,3 +983,5 @@ input[type="password"] {
     justify-content: center;
     width: 100%;
   }
+}
+  
