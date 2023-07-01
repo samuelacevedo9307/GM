@@ -62,15 +62,15 @@ export default function Home() {
               </section>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        </div>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+          <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
       </main>
       {/*-comienzo del articulo-*/}
       <section className="section1">
@@ -192,7 +192,7 @@ export default function Home() {
             <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
               ¿Cómo funciona?
             </button>
-            <button className="botonMas">+</button>
+            
           </div>
           <div className="collapse multi-collapse" id="multiCollapseExample4">
             <p>
@@ -215,7 +215,7 @@ export default function Home() {
             <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
               ¿Cómo funciona?
             </button>
-            <button className="botonMas">+</button>
+            
           </div>
           <div className="collapse multi-collapse" id="multiCollapseExample6">
             <p>
@@ -227,7 +227,7 @@ export default function Home() {
             <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">
               ¿Cómo funciona?
             </button>
-            <button className="botonMas">+</button>
+          
           </div>
           <div className="collapse multi-collapse" id="multiCollapseExample7">
             <p>
@@ -239,7 +239,7 @@ export default function Home() {
             <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample8" aria-expanded="false" aria-controls="multiCollapseExample8">
               ¿Cómo funciona?
             </button>
-            <button className="botonMas">+</button>
+            
           </div>
           <div className="collapse multi-collapse" id="multiCollapseExample8">
             <p>

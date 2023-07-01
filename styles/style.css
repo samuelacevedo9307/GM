@@ -80,6 +80,12 @@ header button {
   font-weight: bold;
   margin: 10px;
 }
+.botonSubmit {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .row {
   width: 800px;
 }
@@ -168,6 +174,13 @@ main button {
   color: #000;
   font-weight: bold;
 }
+#carouselExampleIndicators li {
+  color: #232851;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+}
+
 h1 {
   display: flex;
   width: 500px;
@@ -404,6 +417,7 @@ p {
   margin-bottom: 50px;
   flex-wrap: wrap;
   border-radius: 15px;
+  margin-top: 200px;
 }
 .usuario h2 {
   margin-top: 20px;
@@ -473,12 +487,13 @@ h4 {
 
 .inferior {
   margin-top: 200px;
+  height: 100%;
+  width: 100%;
 }
 .inferior h1 {
-  width: 70%;
+  width: 100%;
   height: 20%;
-  border: 3px solid#cdd1d0;
-  border-radius: 30px;
+  border-bottom: 3px solid#cdd1d0;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -490,6 +505,7 @@ h4 {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
   color: #093b4d;
@@ -504,14 +520,14 @@ h4 {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 20px;
-  height: 500px;
+  width: 100%;
 }
 .pregunta div {
-  border: 3px solid #cdd1d0;
+  border-bottom: 3px solid #cdd1d0;
   border-radius: 30px;
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
 }
 .pregunta1 {
   display: flex;
@@ -522,16 +538,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   width: 50%;
-}
-.botonMas {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  font-weight: bold;
-  font-size: 30px;
-  padding-right: 20px;
 }
 
 /*---footer---*/
@@ -583,7 +589,7 @@ footer img {
   font-weight: 400;
   text-decoration: none;
   margin: 6px 0px;
-}
+}a
 input {
   height: 44px;
   border-radius: 50px;
@@ -611,27 +617,37 @@ input {
   border-radius: 15px;
 }
 
-/* --- responsive mobile ----*/
-
-@media only screen and (min-width: 350px) and (orientation: portrait) {
+/* ---------------------------------- responsive mobile ----------------------------------------------------------------------------*/
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+  .section img {
+    display: none;
+  }
   body {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    margin-left: 300px;
     width: 100%;
+    padding-left: 490px;
   }
+}
+main ol {
+  position: relative;
+  margin-top: 100px;
+  top: 100%;
+}
+@media only screen and (min-width: 360px) and (orientation: portrait) {
+  
   .pregunta {
     padding: 5%;
     width: 100%;
     height: min-content;
     align-items: center;
-    justify-content: justify;
-    width: 100%;
+    justify-content: center;
+  
   }
   .pregunta div {
-    border: 3px solid #cdd1d0;
+    border-bottom: 3px solid #cdd1d0;
   }
   .pregunta h1 {
     text-align: center;
@@ -695,6 +711,7 @@ input {
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 200px;
+    width: 100%;
   }
   .usuario div {
     width: 400px;
@@ -742,6 +759,7 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
   }
   .redesSociales {
     display: none;

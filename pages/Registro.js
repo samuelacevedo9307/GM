@@ -235,7 +235,7 @@ export default function Registro() {
                 </div>
               </div>
             </div>
-            <button type="submit">submit</button>
+            <button  className="botonSubmit" type="submit">submit</button>
           </form>
         </div>
       </div>
