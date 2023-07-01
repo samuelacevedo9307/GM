@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  border: blue solid 2px;
 }
 
 /* ---menu de navegacion---*/
@@ -168,12 +167,14 @@ main button {
   color: #000;
   font-weight: bold;
 }
-main a {
-  display: flex;
-  height: 100px;
-  margin-top: 400px;
+.banner a {
+  background-color: #1B1A20;
+  height: 50px;
+  width: 100px;
 }
-
+.banner{
+  position: relative;
+}
 h1 {
   display: flex;
   width: 500px;
@@ -635,7 +636,6 @@ input {
     width: 100%;
   }
   main a {
-    margin-top: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;

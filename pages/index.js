@@ -15,7 +15,7 @@ export default function Home() {
 
       {/*------seccion carousel---------*/}
       <main>
-        <div>
+        <div className="banner">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
