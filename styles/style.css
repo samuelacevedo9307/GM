@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  border: blue solid 2px;
 }
 
 /* ---menu de navegacion---*/
@@ -146,13 +147,6 @@ button {
 .fa-bars {
   display: none;
 }
-button:hover {
-  background-color: #3cddf3;
-  border: none;
-  border-radius: 10px;
-  font-size: 13.18px;
-  color: #ffffff;
-}
 
 /*---main con contenedores principales---*/
 
@@ -164,7 +158,7 @@ main {
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  height: 590px;
+  height: 100%;
   width: 100%;
 }
 main img {
@@ -174,11 +168,10 @@ main button {
   color: #000;
   font-weight: bold;
 }
-#carouselExampleIndicators li {
-  color: #232851;
-  width: 20px;
-  height: 20px;
-  font-weight: bold;
+main a {
+  display: flex;
+  height: 100px;
+  margin-top: 400px;
 }
 
 h1 {
@@ -622,6 +615,10 @@ input {
   .section img {
     display: none;
   }
+  .imagenToken {
+    display: none;
+    width: 0%;
+  }
   body {
     display: flex;
     justify-content: space-around;
@@ -631,11 +628,26 @@ input {
     padding-left: 490px;
   }
 }
-main ol {
-  position: relative;
-  margin-top: 100px;
-  top: 100%;
-}
+  main div {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+  }
+  main a {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 5px;
+  }
+  main h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 @media only screen and (min-width: 360px) and (orientation: portrait) {
   
   .pregunta {
@@ -670,7 +682,6 @@ main ol {
   }
   main {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     width: 100%;

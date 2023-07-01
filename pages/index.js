@@ -15,62 +15,59 @@ export default function Home() {
 
       {/*------seccion carousel---------*/}
       <main>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <section className="section">
-                <div>
-                  <h1>Empresas Tokenizadas</h1>
-                  <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                  <button>Ofertar</button>
+        <div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <section className="section">
+                    <div>
+                      <h1>Empresas Tokenizadas</h1>
+                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
+                      <button>Ofertar</button>
+                    </div>
+                    {/*-grafica lado derecho section*/}
+                    <div className="imagenToken">
+                      <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
+                    </div>
+                  </section>
                 </div>
-                {/*-grafica lado derecho section*/}
-                <div>
-                  <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
+                <div class="carousel-item">
+                  <section className="section">
+                    <div>
+                      <h1>Empresas Tokenizadas</h1>
+                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
+                      <button>Ofertar</button>
+                    </div>
+                    {/*-grafica lado derecho section*/}
+                    <div className="imagenToken">
+                      <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
+                    </div>
+                  </section>
                 </div>
-              </section>
+                <div class="carousel-item">
+                  <section className="section">
+                    <div>
+                      <h1>Empresas Tokenizadas</h1>
+                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
+                      <button>Ofertar</button>
+                    </div>
+                    {/*-grafica lado derecho section*/}
+                    <div className="imagenToken">
+                      <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
+                    </div>
+                  </section>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              <section className="section">
-                <div>
-                  <h1>Empresas Tokenizadas</h1>
-                  <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                  <button>Ofertar</button>
-                </div>
-                {/*-grafica lado derecho section*/}
-                <div>
-                  <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
-                </div>
-              </section>
-            </div>
-            <div class="carousel-item">
-              <section className="section">
-                <div>
-                  <h1>Empresas Tokenizadas</h1>
-                  <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                  <button>Ofertar</button>
-                </div>
-                {/*-grafica lado derecho section*/}
-                <div>
-                  <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
-                </div>
-              </section>
-            </div>
-          </div>
+            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
         </div>
-        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
       </main>
       {/*-comienzo del articulo-*/}
       <section className="section1">
