@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Headlanding from "@/Components/headlanding";
 import Footer from "@/Components/Footer";
 import WalletConnect from "@/Components/ConnectionWallet";
-import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "../Components/FunctionsContract.js";
+import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "./FunctionsContract.js";
 import { useState } from "react";
 import Images from "next/image";
 import Link from "next/link";
