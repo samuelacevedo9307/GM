@@ -49,18 +49,19 @@ header button {
   width: 140px;
 }
 #miContenedorPadre input {
-  width: 140px;
+  width: 120px;
   border: transparent;
   border-bottom: #3f4868 solid 1px;
+  text-align: center;
 }
-.registro1 , .registro2 , .registro3 , .registro4  {
+.registro1 , .registro2 , .registro3 , .registro4 , .registro5 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   height: 70px;
   width: 100%;
 }
-.registro1 div , .registro2 div , .registro3 div , .registro4 div  {
+.registro1 div , .registro2 div , .registro3 div , .registro4 div , .registro5 div{
   width: 50%;
 }
 .form1 {
@@ -501,8 +502,9 @@ p {
   justify-content: space-around;
   margin-bottom: 50px;
   flex-wrap: wrap;
-  border-radius: 15px;
+  border-radius: 20px;
   margin-top: 200px;
+  color: white;
 }
 .usuario h2 {
   margin-top: 20px;
@@ -552,6 +554,53 @@ h4 {
   font-weight: 700;
   margin-top: -15px;
   font-family: "Lato";
+}
+/*----------------------------seccion de Modal--------------------*/
+.modalNft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../public/images/confeti.svg);
+
+}
+.modalNft img {
+  width: 200px;
+}
+.modal1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 25px;
+}
+.modal1 h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Lato';
+  font-weight:700;
+  font-size: 30px ;
+  margin-bottom: 10px;
+}
+.modal1 button {
+  display: flex;
+  background-color: #53AE94;
+  color: #FAFAFA;
+  border-radius: 20px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-family: 'Lato';
+  font-display:inherit;
+}
+.compra1 {
+  display: flex;
+  width: 60%;
+  margin-top: 15px;
 }
 
 /*---section boton---*/

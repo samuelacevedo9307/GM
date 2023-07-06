@@ -134,8 +134,19 @@ export default function Registro() {
                   <br />
                   <input type="text" id="doc" name="doc" value={idnum} onChange={(e) => setidnum(e.target.value)} />
                   <br />
+                </div>
               </div>
+            <div className="registro5">
+              <div>
+                <i className="bi bi-envelope-plus"></i> fecha de Nacimiento:
+                <input type="date" id="blockchain" name="blockchain" value={date} onChange={(e) => setdate(e.target.value)} />
               </div>
+              <div>
+                <i className="bi bi-envelope-plus"></i> Nacionalidad:
+                <input type="text" id="blockchain" name="blockchain" value={nacion} onChange={(e) => setnacion(e.target.value)} />
+              </div>
+                <br />
+            </div>
             <div className="registro2">
               <div>
                 <label>
@@ -199,30 +210,31 @@ export default function Registro() {
                 <input type="text" id="ingresos" name="ingresos" value={ingr} onChange={(e) => setingr(e.target.value)} />
               </div>
               <div>
-              <label>
+                <br />
+                <label>
                   <i className="bi bi-envelope-plus"></i> Procedencia de los fondos:
                 </label>
                 <br />
                 <input type="text" id="pfondos" name="pfondos" value={pfondos} onChange={(e) => setpfondos(e.target.value)} />
               </div>
             </div>
-            <div className="registro5">
-                <br />
-                <label>
-                  <i className="bi bi-envelope-plus"></i> Conocimiento en criptomonedas y tecnología blockchain:
-                </label>
-                <br />
-                <input type="text" id="blockchain" name="blockchain" value={block} onChange={(e) => setblock(e.target.value)} />
-                </div>
+              <div>
+                  
+              </div>
                 <div className="boolean">
                   <div className="boolean">
                     <br />
+                  <label>
+                    <p type="button">Conocimiento en criptomonedas y tecnología blockchain:</p>
+                  </label>
+                  <input type="checkbox" checked={block} onChange={(e) => setblock(e.target.checked)} />
+                      <br />
                     <label>
-                      <p type="button"> Declaración de veracidad: &nbsp;&nbsp;&nbsp;&nbsp;</p>
+                      <p type="button"> Declaración de veracidad:</p>
                       <input type="checkbox" checked={ver} onChange={(e) => setver(e.target.checked)} />
                       <span className="checkmark"></span>
                     </label>
-                    <br />
+                      <br />
                     <label>
                       <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Acepto las política de tratamiento de datos personales: &nbsp;&nbsp;&nbsp;&nbsp;
