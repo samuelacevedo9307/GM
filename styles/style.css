@@ -5,7 +5,8 @@
 /* ---menu de navegacion---*/
 
 body {
-  margin: 20px;
+  width: 100%;
+  background-color: #FAFAFA;
 }
 header {
   display: flex;
@@ -19,7 +20,12 @@ header nav {
   text-transform: uppercase;
   width: 65%;
   font-family: "montserrat";
+  font-size: large;
   text-transform: uppercase;
+}
+header a {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 header button {
   width: 134px;
@@ -27,6 +33,41 @@ header button {
   background-color: black;
   border-radius: 15px;
   margin: 0px 10px;
+}
+.offcanvas-body {
+  width: 400px;
+  padding: 0px !important;
+}
+#miContenedorPadre {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 10px;
+  justify-content: center;
+}
+#miContenedorPadre label {
+  width: 140px;
+}
+#miContenedorPadre input {
+  width: 140px;
+  border: transparent;
+  border-bottom: #3f4868 solid 1px;
+}
+.registro1 , .registro2 , .registro3 , .registro4  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+}
+.registro1 div , .registro2 div , .registro3 div , .registro4 div  {
+  width: 50%;
+}
+.form1 {
+  width: 180px;
+}
+.form1 select {
+  width: 35px;
 }
 #botonPrincipal button {
   background-color: black;
@@ -53,17 +94,21 @@ header button {
 .login-container button {
   color: #000;
   font-weight: bold;
-  margin: 0px 10px;
+  margin:20px;
   border-radius: 15px;
+  color: white;
 }
 .login-container a {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 10px;
 }
 .login-container h2 {
   display: flex;
   justify-content: center;
+}
+.login-container input {
+  margin: 30px 10px;
 }
 /*--------   seccion de registro y Login ---------*/
 
@@ -85,6 +130,7 @@ header button {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 0px ;
 }
 .row {
   width: 800px;
@@ -120,8 +166,10 @@ header button {
   margin: 15px;
 }
 .boolean div {
-  width: 300px;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .registroLogin {
@@ -158,7 +206,8 @@ main {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   height: 100%;
-  width: 100%;
+  width: 100% !important;
+  margin: 0px !important;
 }
 main img {
   height: 590px;
@@ -174,6 +223,7 @@ main button {
 }
 .banner{
   position: relative;
+  width: 100%;
 }
 h1 {
   display: flex;
@@ -205,12 +255,39 @@ h3 {
   align-items: center;
   width: 100%;
   text-align: center;
+  height: 100%;
+  padding: 10px;
+}
+.flechaToken {
+  height: 100px;
+  width: auto;
+  position:absolute;
+  left:-90px;
+  top:70px;
+  z-index: 1;
+}
+.triagVer {
+  height: 60px;
+  width: auto;
+  position:absolute;
+  bottom: 480px;
+  left: 450px;
+  z-index: 1;
+}
+.triagRos {
+  height: 70px;
+  width: auto;
+  position:absolute;
+  bottom: 250px;
+  left: 550px;
+  z-index: 1;
 }
 .section div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 .section p {
   color: black;
@@ -236,7 +313,20 @@ h3 {
   justify-content: center;
   flex-direction: column;
   height: 200px;
-  margin-top: 300px;
+  margin: 200px 0px;
+}
+.triagNeg {
+  height: 100px;
+  width: auto;
+  position:absolute;
+  left: 40px;
+}
+.flecha3 {
+  height: 60px;
+  width: auto;
+  position:absolute;
+  left: 180px;
+  top:100;
 }
 .section1 h1 {
   text-align: center;
@@ -245,6 +335,7 @@ h3 {
   width: 400px;
   height: 100px;
   font-family: "Montserrat";
+  margin-bottom: 50px;
 }
 .section1 h2 {
   width: 80%;
@@ -480,23 +571,22 @@ h4 {
 /*---seccion inferior con preguntas frecuentes---*/
 
 .inferior {
-  margin-top: 200px;
-  height: 100%;
+  margin: 200px 0px;
   width: 100%;
+  height: fit-content !important;
 }
 .inferior h1 {
   width: 100%;
   height: 20%;
   border-bottom: 3px solid#cdd1d0;
   display: flex;
-  flex-direction: column;
   text-align: center;
   align-items: center;
-  margin: 20px;
+  margin: 50px 20px;
   font-family: "Montserrat";
 }
 .inferior button {
-  width: 100%;
+  width: 100% ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -508,30 +598,38 @@ h4 {
 }
 
 /*---------------preguntasfrecuentes------------*/
-
+.flecha1 {
+  height: 150px;
+  width: auto;
+  position:absolute;
+  right: 200px;
+  top: 5350px;
+  z-index: 1;
+}
 .pregunta {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  margin: 20px;
   width: 100%;
+  height: 300px;
+  height: fit-content !important;
 }
 .pregunta div {
-  border-bottom: 3px solid #cdd1d0;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.pregunta1 {
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
   width: 50%;
+  padding: 10px;
 }
-.pregunta2 {
+.pregunta div div {
+  width: 100%;
+  border: 2px solid #1B1A20;
+  margin: 5px ;
+}
+.pregunta p {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
 }
 
 /*---footer---*/
@@ -583,8 +681,8 @@ footer img {
   font-weight: 400;
   text-decoration: none;
   margin: 6px 0px;
-}a
-input {
+}
+a input {
   height: 44px;
   border-radius: 50px;
   width: 290px;
@@ -611,44 +709,34 @@ input {
   border-radius: 15px;
 }
 
-/* ---------------------------------- responsive mobile ----------------------------------------------------------------------------*/
-@media only screen and (max-width: 900px) and (orientation: portrait) {
-  .section img {
-    display: none;
-  }
-  .imagenToken {
-    display: none;
-    width: 0%;
-  }
+/* ---------------------------------- responsive para resoluciones altas ------------------------------*/
+/* ---------------------------------- responsive mobile -----------------------------------------------*/
+@media only screen and (min-width: 1280px) {
+  /* Agrega tus estilos para resoluciones altas aquí */
   body {
+    font-size: 100px;
+  }
+  header{
+    /* Ejemplo: Cambia el color de fondo */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+  }
+  /* Agrega más reglas CSS según tus necesidades */
+  main{
+    /* Ejemplo: Aumenta el tamaño de la sección */
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Agrega estilos específicos para elementos en resoluciones altas */
+  .imagenToken {
+    /* Ejemplo: Aumenta el tamaño de la imagen */
     width: 100%;
-    padding-left: 490px;
+    height: auto;
   }
 }
-  main div {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    width: 100%;
-  }
-  main a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    right: 5px;
-  }
-  main h1 {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-@media only screen and (min-width: 360px) and (orientation: portrait) {
+@media only screen and (min-width: 280px) and (orientation: portrait) {
   
   .pregunta {
     padding: 5%;
@@ -677,9 +765,6 @@ input {
     margin-bottom: 30px;
     font-family: "Montserrat";
   }
-  nav {
-    display: none;
-  }
   main {
     display: flex;
     align-items: center;
@@ -691,22 +776,33 @@ input {
   }
   .section2 {
     margin-bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 1000px;
   }
-  .section2,
+  .section2 h2 {
+    margin-bottom: 100px;
+  }
   .section2 div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    margin-top: 100px;
+    width: 400px;
   }
   .section2 p {
     width: 400px;
     font-weight: bold;
+    font-size: large;
     color: #000;
     font-family: "Lora";
   }
+  .servicio1 button  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  
   .section3 {
     display: flex;
     flex-direction: column;
@@ -719,13 +815,14 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 200px;
     width: 100%;
+    
   }
   .usuario div {
-    width: 400px;
+    width: 350px;
     font-weight: bold;
     color: #000;
   }
@@ -775,19 +872,18 @@ input {
   .redesSociales {
     display: none;
   }
-  footer {
+footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
     align-items: center;
   }
-}
-.login-container form {
-  display: flex;
 
+.login-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   width: 90%;
 }
@@ -967,3 +1063,43 @@ input[type="password"] {
     justify-content: center;
     width: 100%;
   }
+}
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+  .section img {
+    display: none;
+  }
+  .imagenToken {
+    display: none;
+    width: 0%;
+  }
+  body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 500px;
+  }
+  main div {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+  }
+  main a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 5px;
+  }
+  main h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    display: none;
+  }
+}
