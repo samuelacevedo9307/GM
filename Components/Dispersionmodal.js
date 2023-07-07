@@ -1,4 +1,3 @@
-
 import { Inter } from "next/font/google";
 import { _approveUsdt, _approveGm, _setTokensAtContract, _setAddressContractGmToken, _setAddressContractUsdtToken, _buyTokens, _widthdrawGmToken, _widthdrawUsdtToken, _getSupply, _getUsdtInContract, _getGmAddress, _getUsdtAddress, _getPricePerToken } from "../ConexionBlockchain/DispersionContractFunctions.js";
 import { useState, useEffect } from "react";
@@ -166,49 +165,49 @@ export default function Dispersionmodal() {
   return (
     <>
       <div className="modal fade" id="comprar" tabIndex={-1} aria-labelledby="exampleModalLabel2" aria-hidden="true">
-        <div className="modal-dialog">
+       
+        <form className="compraGm" onSubmit={handlesubmit}>
+          <div>
+            <div className="gm1">
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+              <p>Comprar GMCOINS</p>
+              <input
+                className="mb-4"
+                type="number"
+                placeholder={"USDT"}
+                value={usdtvalue}
+                onChange={(e) => {
+                  setusdt(e.target.value);
+                  setgm(e.target.value / tokenprice);
+                }}
+              ></input>
+              <input
+                readOnly
+                className=""
+                value={usdtvalue / tokenprice}
+                placeholder={usdtvalue / tokenprice}
+                on={(e) => {
+                  setgm(e.target.value);
+                }}
+              ></input>
+
+              <p>Obtienes 100 GMC por 100USD</p>
+              <button type="submit" className="botonCompraGm">
+                Continuar
+              </button>
+
+              <a>Al continuar, aceptas nuestras politicas de uso</a>
+            </div>
+          </div>
+        </form>
+        <div className="modal-dialog" style={{display:"none"}}>
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel2">
                 Comprar
               </h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
             </div>
-            <div className="modal-body">
-              <form className="compraGm" onSubmit={handlesubmit}>
-                <div>
-                  <div className="gm1">
-                    <p>Comprar GMCOINS</p>
-                    <input
-                      className="mb-4"
-                      type="number"
-                      placeholder={"USDT"}
-                      value={usdtvalue}
-                      onChange={(e) => {
-                        setusdt(e.target.value);
-                        setgm(e.target.value / tokenprice);
-                      }}
-                    ></input>
-                    <input
-                      readOnly
-                      className=""
-                      value={usdtvalue / tokenprice}
-                      placeholder={usdtvalue / tokenprice}
-                      on={(e) => {
-                        setgm(e.target.value);
-                      }}
-                    ></input>
-
-                    <p>Obtienes 100 GMC por 100USD</p>
-                    <button type="submit" className="botonCompraGm">
-                      Continuar
-                    </button>
-
-                    <a>Al continuar, aceptas nuestras politicas de uso</a>
-                  </div>
-                </div>
-              </form>
-            </div>
+            <div className="modal-body"></div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 Close

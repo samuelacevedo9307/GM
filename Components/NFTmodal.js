@@ -76,16 +76,7 @@ export default function Nftmodal() {
   return (
     <>
       <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="miModalLabel">
-                Get your Reward
-              </h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              {!adressbool && !mintbool ? (
+      {!adressbool && !mintbool ? (
                 <div className="modalNft">
                   <div className="modal1">
                     <br></br>
@@ -112,6 +103,7 @@ export default function Nftmodal() {
                   ) : (
                     <div className="modalNft">
                       <div className="modal1">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <br></br>
                         <h2>Congrats</h2>
                         <p>you Mint successfuly</p>
@@ -123,6 +115,16 @@ export default function Nftmodal() {
                   )}
                 </>
               )}
+        <div class="modal-dialog modal-xl" style={{display:"none"}}>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="miModalLabel">
+                Get your Reward
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
