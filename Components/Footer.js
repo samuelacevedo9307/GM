@@ -5,7 +5,7 @@ export default function Footer() {
     return(
     <footer>
       <div>
-        <img src="/images/LogoGmFinance2.png" alt="logotipo" />
+        <img src="/images/logoGmFinance2.png" alt="logotipo" />
         <div className="redesSociales">
           <span className="redes">
             <a href="#"><i className="fa-brands fa-square-facebook" /></a>

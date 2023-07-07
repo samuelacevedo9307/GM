@@ -92,11 +92,16 @@ export default function Nftmodal() {
             <div class="modal-body">
               {!adressbool  && !mintbool ?(
                 <>
-                <div className="usuario">
-                  <div className="comentario1">
-                    <h2>Set Address</h2>
-                    <p>Send your wallet for mint</p>
-                    <button onClick={SetAddressForMint}>Set</button>
+                <div className="compraGm">
+                  <div >
+                    <div className="gm1">
+                      <p>Comprar GMCOINS</p>
+                      <button>12850</button>
+                      <button>12850</button>
+                      <button>Obtienes 100 GMC por 1000USD</button>
+                    <button className="botonCompraGm" onClick={SetAddressForMint}>Continuar</button>
+                      <a>Al continuar, aceptas nuestras politicas de uso</a>
+                    </div>
                   </div>
                 </div>
                 <div className="modalNft">
@@ -104,9 +109,10 @@ export default function Nftmodal() {
                         <img className="compra1" src="/images/NFT GM FINANCE.gif" alt="nft1" />
                         <h2>¡Gracias por Registrarte!</h2>
                         <button onClick={startMint}>RECLAMAR</button>
+                        <img className="serp1"src="/images/serpentina.png" alt="serp1" />
+                        <img className="serp2"src="/images/serpentina.png" alt="serp2" />
                       </div>
-                        <img src="/images/serpentina.png" alt="serp1" />
-                        <img src="/images/serpentina.png" alt="serp2" />
+                        
                     </div>
                     <div className="usuario">
                       <div className="comentario1">

@@ -94,7 +94,7 @@ export default function Headlanding() {
           </div>
         </div>
         <Link className="text-white" href={`/`} passHref legacyBehavior>
-          <a><img src="/images/LogoGmFinance.png" alt="logotipo" /></a>
+          <a><img src="/images/logoGmFinance.png" alt="logotipo" /></a>
         </Link>
 
         <div></div>
