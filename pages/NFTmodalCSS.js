@@ -13,10 +13,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Nftmodal() {
   const [adressbool, setadressbool] = useState(false);
   const [mintbool, setmintbool] = useState(false);
-  useEffect(()=>{
-    var miModal = new bootstrap.Modal(document.getElementById('miModal'));
+  useEffect(() => {
+    var miModal = new bootstrap.Modal(document.getElementById("miModal"));
     miModal.show();
-  },[])
+  }, []);
 
   async function startMint() {
     const result = await _mintNFT("Gm", "Phase 1", "https://www.construyehogar.com/wp-content/uploads/2014/06/Plano-de-apartamento-peque%C3%B1o-moderno-Tiziana-Caroleo-en-Pinterest.jpg")
@@ -90,36 +90,58 @@ export default function Nftmodal() {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              {!adressbool  && !mintbool ?(
+              {!adressbool && !mintbool ? (
                 <>
-                <div className="compraGm">
-                  <div >
-                    <div className="gm1">
-                      <p>Comprar GMCOINS</p>
-                      <button>12850</button>
-                      <button>12850</button>
-                      <button>Obtienes 100 GMC por 1000USD</button>
-                    <button className="botonCompraGm" onClick={SetAddressForMint}>Continuar</button>
-                      <a>Al continuar, aceptas nuestras politicas de uso</a>
+                  <div className="compraGm">
+                    <div>
+                      <div className="gm1">
+                        <p>Comprar GMCOINS</p>
+                        <button>12850</button>
+                        <button>12850</button>
+                        <button>Obtienes 100 GMC por 1000USD</button>
+                        <button className="botonCompraGm" onClick={SetAddressForMint}>
+                          Continuar
+                        </button>
+                        <a>Al continuar, aceptas nuestras politicas de uso</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="modalNft">
-                      <div className="modal1">
-                        <img className="compra1" src="/images/NFT GM FINANCE.gif" alt="nft1" />
-                        <h2>¡Gracias por Registrarte!</h2>
-                        <button onClick={startMint}>RECLAMAR</button>
-                        <img className="serp1"src="/images/serpentina.png" alt="serp1" />
-                        <img className="serp2"src="/images/serpentina.png" alt="serp2" />
-                      </div>
-                        
+                  <div className="modalNft">
+                    <div className="modal1">
+                      <img className="compra1" src="/images/NFT GM FINANCE.gif" alt="nft1" />
+                      <h2>¡Gracias por Registrarte!</h2>
+                      <button onClick={startMint}>RECLAMAR</button>
+                      <img className="serp1" src="/images/serpentina.png" alt="serp1" />
+                      <img className="serp2" src="/images/serpentina.png" alt="serp2" />
                     </div>
-                    <div className="usuario">
-                      <div className="comentario1">
-                        <h2>Congrats</h2>
-                        <p>you Mint successfuly</p>
-                      </div>
+                  </div>
+                  <div className="modalNft">
+                    <div className="modal1">
+                      <br></br>
+                      <h2>Set Address</h2>
+                      <p>Send your wallet for mint</p>
+                      <button onClick={SetAddressForMint}>Set</button>
+                      <br></br>
+                      <img className="serp1" src="/images/serpentina.png" alt="serp1" />
+                      <img className="serp2" src="/images/serpentina.png" alt="serp2" />
                     </div>
+                  </div>
+                  <div className="modalNft">
+                    <div className="modal1">
+                      <br></br>
+                      <h2>Congrats</h2>
+                      <p>you Mint successfuly</p>
+                      <br></br>
+                      <img className="serp1" src="/images/serpentina.png" alt="serp1" />
+                      <img className="serp2" src="/images/serpentina.png" alt="serp2" />
+                    </div>
+                  </div>
+                  <div className="usuario">
+                    <div className="comentario1">
+                      <h2>Congrats</h2>
+                      <p>you Mint successfuly</p>
+                    </div>
+                  </div>
                 </>
               ) : (
                 <>

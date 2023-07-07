@@ -53,12 +53,14 @@ export default function Headlanding() {
   return (
     <>
       <header>
-        <div  className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
+        <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
           <div className="offcanvas-header">
             <img src="/images/logoGmFinance.png" alt="logotipo" width={300} />
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
+            
+
             <div className="col ">
               <div className="botonRegistro">
                 {session ? (
@@ -91,10 +93,28 @@ export default function Headlanding() {
                 </div>
               </div>
             </div>
+            <ul className="menu navbar-nav">
+              <li>
+                <a href="#">tokenizacion</a>
+              </li>
+              <li><a href="#">Ranking</a></li>
+              <li><a href="#">FAQ</a></li>
+              {!isConnected ? (
+                <></>
+              ) : (
+                <>
+                  <Link className="text-white" href={`/dashboard`} passHref legacyBehavior>
+                    <a href="#">dashboard</a>
+                  </Link>
+                </>
+              )}
+            </ul>
           </div>
         </div>
         <Link className="text-white" href={`/`} passHref legacyBehavior>
-          <a><img src="/images/logoGmFinance.png" alt="logotipo" /></a>
+          <a>
+            <img src="/images/logoGmFinance.png" alt="logotipo" />
+          </a>
         </Link>
 
         <div></div>

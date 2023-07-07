@@ -638,9 +638,43 @@ h4 {
   width:200px;
   height: 300px;
   z-index: 1;
+  pointer-events: none;
+  cursor: none;
 }
+/* Cambiar el color de fondo del modal */
+#miModal {
+  background-color: #00000013;
+}
+.modal-footer{
+  background-color: #000 !important;
+}
+/* Cambiar el color del encabezado del modal */
+.modal-header {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Cambiar el tamaño de fuente del contenido del modal */
+.modal-body {
+  background-color: #000;
+  font-size: 16px;
+}
+
+/* Cambiar el estilo del botón "Guardar cambios" */
+.modal-footer .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Cambiar el color del botón "Cerrar" */
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
 .modal1 {
   width: 350px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;

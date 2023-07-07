@@ -26,7 +26,7 @@ export default function Home() {
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <img className="fondo" src="/images/imgBanner1.png" alt="banner1" />
+                      <img className="fondo" src="/images/ImgBanner1.svg" alt="banner1" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
@@ -42,7 +42,7 @@ export default function Home() {
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <img className="fondo" src="/images/imgBanner2.svg" alt="banner2" />
+                      <img className="fondo" src="/images/ImgBanner2.svg" alt="banner2" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
@@ -58,7 +58,7 @@ export default function Home() {
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <img className="fondo" src="/images/imgBanner3.svg" alt="banner3" />
+                      <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
