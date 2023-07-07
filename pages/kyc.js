@@ -24,8 +24,6 @@ export default function Settings() {
       <Container>
         <section id="kyc">
           <h2>Datos generales</h2>
-          <ENSAvatar address={account} size={125} />
-
           <p>{session?.user?.Nombre}</p>
           <p>{session?.user?.identificacion}</p>
           <p>{session?.user?.email}</p>

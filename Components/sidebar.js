@@ -20,7 +20,6 @@ export default function Sidebar() {
       <div id="sidebar-container">
         <ul className="menu navbar-nav ">
           <div className="mb-1 mt-5 identicon">
-            <ENSAvatar address={account} size={150} />
             {session ? (
               <>
                 <p>{session?.user?.Nombre}</p>
