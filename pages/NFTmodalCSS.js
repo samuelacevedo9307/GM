@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Headlanding from "@/Components/headlanding";
 import Footer from "@/Components/Footer";
 import WalletConnect from "@/Components/ConnectionWallet";
-import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "../Components/FunctionsContract.js";
+import { _approveUsdt, _approveGm, _setTokensAtContract, _setAddressContractGmToken, _setAddressContractUsdtToken, _buyTokens, _widthdrawGmToken,_widthdrawUsdtToken, _getSupply, _getUsdtInContract, _getGmAddress, _getUsdtAddress, _getPricePerToken } from "../ConexionBlockchain/DispersionContractFunctions.js";
 import { useState, useEffect } from "react";
 import Images from "next/image";
 import Link from "next/link";
@@ -18,19 +18,110 @@ export default function Nftmodal() {
     miModal.show();
   }, []);
 
-  async function startMint() {
-    const result = await _mintNFT("Gm", "Phase 1", "https://www.construyehogar.com/wp-content/uploads/2014/06/Plano-de-apartamento-peque%C3%B1o-moderno-Tiziana-Caroleo-en-Pinterest.jpg")
+  async function buyTokens() {
+    const result = await _buyTokens(100)
       .then((e) => {
         console.log(e);
-        setmintbool(true);
-        setadressbool(false);
+        
       })
       .catch((e) => {
         console.log("Error = ", e);
       });
   }
-  async function SetActive() {
-    const result = await _setActive(true)
+  async function approveUsdt(_value) {
+    const result = await _approveUsdt(_value)
+      .then((e) => {
+        console.log(e);
+        
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function approveGm(_value) {
+    const result = await _approveGm(_value)
+      .then((e) => {
+        console.log(e);
+        
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function SetTokensToContract(_value) {
+    const result = await _setTokensAtContract(_value)
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function SetAddressGm(_value) {
+    const result = await _setAddressContractGmToken(_value)
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function SetAddressUsdt(_value) {
+    const result = await _setAddressContractUsdtToken(_value)
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function widthdrawGm() {
+    const result = await _widthdrawGmToken(_value)
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function widthdrawUsdt() {
+    const result = await _widthdrawUsdtToken()
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function getSupply() {
+    const result = await _getSupply()
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function getUsdtInContract() {
+    const result = await _getUsdtInContract()
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function getGmTokenAddress() {
+    const result = await _getGmAddress()
+      .then((e) => {
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
+  async function getUsdtAddress() {
+    const result = await _getUsdtAddress()
       .then((e) => {
         console.log(result);
       })
@@ -48,36 +139,18 @@ export default function Nftmodal() {
         console.log("Error = ", e);
       });
   }
+  async function GetPricePerToken() {
+    const result = await _getPricePerToken()
+      .then((e) => {
+        console.log(e);
+        return e;
+      })
+      .catch((e) => {
+        console.log("Error = ", e);
+      });
+  }
 
-  async function GetTokenMetadata() {
-    const result = await _getTokenMeta()
-      .then((e) => {
-        console.log(e);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-  async function SetAddressForMint() {
-    const result = await _setAddressForMint()
-      .then((e) => {
-        console.log(e);
-        setadressbool(true);
-        setmintbool(false);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
-  async function GetMinters() {
-    const result = await _getMinters()
-      .then((e) => {
-        console.log(e);
-      })
-      .catch((e) => {
-        console.log("Error = ", e);
-      });
-  }
+ 
   return (
     <>
       <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
@@ -98,8 +171,8 @@ export default function Nftmodal() {
                         <p>Comprar GMCOINS</p>
                         <button>12850</button>
                         <button>12850</button>
-                        <button>Obtienes 100 GMC por 1000USD</button>
-                        <button className="botonCompraGm" onClick={SetAddressForMint}>
+                        <button>Obtienes 100 GMC por 100USD</button>
+                        <button className="botonCompraGm" onClick={buyTokens}>
                           Continuar
                         </button>
                         <a>Al continuar, aceptas nuestras politicas de uso</a>
@@ -110,7 +183,7 @@ export default function Nftmodal() {
                     <div className="modal1">
                       <img className="compra1" src="/images/NFT GM FINANCE.gif" alt="nft1" />
                       <h2>¡Gracias por Registrarte!</h2>
-                      <button onClick={startMint}>RECLAMAR</button>
+                      <button >RECLAMAR</button>
                       <img className="serp1" src="/images/serpentina.png" alt="serp1" />
                       <img className="serp2" src="/images/serpentina.png" alt="serp2" />
                     </div>
@@ -120,7 +193,7 @@ export default function Nftmodal() {
                       <br></br>
                       <h2>Set Address</h2>
                       <p>Send your wallet for mint</p>
-                      <button onClick={SetAddressForMint}>Set</button>
+                      <button >Set</button>
                       <br></br>
                       <img className="serp1" src="/images/serpentina.png" alt="serp1" />
                       <img className="serp2" src="/images/serpentina.png" alt="serp2" />
@@ -151,7 +224,7 @@ export default function Nftmodal() {
                         <h2>Claim</h2>
                         <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/08/bored_ape_yacht_club.jpeg-1.jpg" width={130} alt="logotipo" />
                         <p>Get your Nft</p>
-                        <button onClick={startMint}>Mint</button>
+                        <button >Mint</button>
                       </div>
                     </div>
                   ) : (
