@@ -55,7 +55,7 @@ export default function Headlanding() {
       <header>
         <div  className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
           <div className="offcanvas-header">
-            <img src="/images/LogoGmFinance.png" alt="logotipo" width={300} />
+            <img src="/images/logoGmFinance.png" alt="logotipo" width={300} />
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">

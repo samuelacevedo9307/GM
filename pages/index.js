@@ -26,7 +26,7 @@ export default function Home() {
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <Image className="fondo" src="/images/imgBanner1.png" alt="banner1" />
+                      <img className="fondo" src="/images/imgBanner1.png" alt="banner1" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
@@ -42,7 +42,7 @@ export default function Home() {
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <Image className="fondo" src="/images/imgBanner2.png" alt="banner2" />
+                      <img className="fondo" src="/images/imgBanner2.svg" alt="banner2" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
@@ -58,7 +58,7 @@ export default function Home() {
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <Image className="fondo" src="/images/imgBanner3.png" alt="banner3" />
+                      <img className="fondo" src="/images/imgBanner3.svg" alt="banner3" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
@@ -77,51 +77,14 @@ export default function Home() {
               </a>
         </div>
       </main>
-      {/*-comienzo del articulo-*/}
+      {/*------------texto ranking-_-------------*/}
       <section className="section1">
-        <div>
-          <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
-          <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
-        </div>
-          <h1>Tokenización</h1>
-          <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
+        <img className="flecha2" src="/images/flech2.svg" alt="flechaPregunta2" />
+        <img className="triagNeg2" src="/images/triag2.svg" alt="trianguloNegro" />
+        <h1>Ranking</h1>
+        <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
       </section>
-      {/*-section segundo texto izquierda h3 -*/}
-      {/*-section lado derecho con botones-*/}
-      <section className="section2">
-        <div className="servicio1">
-          <button></button>
-          <h4>GM NFT</h4>
-          <p>¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!</p>
-        </div>
-        <div className="servicio2">
-          <button></button>
-          <h4>DAF</h4>
-          <p>Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado).</p>
-        </div>
-        <div className="servicio3">
-          <button></button>
-          <h4>OFERTAS</h4>
-          <p>Las empresas emiten ofertas digitales para invitara personas de todo el mundo a ayudar a expandir sus negocios.</p>
-        </div>
-        <div className="servicio4">
-          <button></button>
-          <h4>GM DEX</h4>
-          <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
-        </div>
-      </section>
-      {/*-grafica lado izquierdo section*/}
-      <section className="section3">
-        <div className="tokenizar">
-          <div className="tokenizar1"></div>
-          <div className="tokenizar2">
-            <h1>Tokenizar</h1>
-            <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
-            <button>Ver video</button>
-          </div>
-        </div>
-      </section>
-      {/*-fin articulo y comienza nueva seccion*/}
+      {/*------------seccion ranking-_-------------*/}
       <section className="usuario">
         <div className="comentario1">
           <h2>GM Holding</h2>
@@ -154,23 +117,15 @@ export default function Home() {
           <button>Ofertar</button>
         </div>
       </section>
-      {/*------------ video tokenizacion seccion 3-_-------------*/}
-      <section className="section3">
-        <div className="tokenizar">
-          <div className="tokenizar1"></div>
-          <div className="tokenizar2">
-            <h1>Tokenizar</h1>
-            <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
-            <button>Ver video</button>
-          </div>
-        </div>
-      </section>
-      {/*------------texto ranking-_-------------*/}
+      {/*------------ Tokenizacion productos y servicios -------------*/}
       <section className="section1">
-        <h1>Ranking</h1>
-        <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
+        <div>
+          <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
+          <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
+        </div>
+          <h1>Tokenización</h1>
+          <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
       </section>
-      {/*------------seccion ranking-_-------------*/}
       <section className="section2">
         <div className="servicio1">
           <button></button>
@@ -193,7 +148,19 @@ export default function Home() {
           <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
         </div>
       </section>
-      {/*-seccion inferior con article-*/}
+      {/*------------ video tokenizacion seccion 3 con imagen -------------*/}
+      <section className="section3">
+        <div className="tokenizar">
+          <div className="tokenizar1"></div>
+          <div className="tokenizar2">
+            <h1>Tokenizar</h1>
+            <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
+            <button>Ver video</button>
+          </div>
+        </div>
+      </section>
+      
+      {/*-seccion inferior con article con preguntas frecuentes-*/}
       <section className="inferior">
         <h1> PREGUNTAS FRECUENTES 
         </h1>
@@ -235,7 +202,6 @@ export default function Home() {
                   </p>
                 </div>
           </div>
-
           <div>
                 <div className="pregunta4">
                   <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">
