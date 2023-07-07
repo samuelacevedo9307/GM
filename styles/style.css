@@ -576,6 +576,7 @@ h4 {
   align-items: center;
   padding: 200px 0px ;
   background-color: #e2f6f1;
+  color: #000;
   background-color: rgb(0, 0, 0 , 0.2);
 }
 .gm1 {
@@ -591,13 +592,15 @@ h4 {
   font-family: 'Lato' !important;
   font-weight: bold;
 }
-.gm1  button{
+.gm1  button, input{
   display: flex;
   align-items: center;
   align-content:flex-start;
   width: 95%;
   margin:10px 0px;
   border-radius: 10px;
+  padding: 10px;
+  border: none;
   background-color:#979797b2 ;
   color: #000;
   font-weight: bold;
@@ -644,9 +647,11 @@ h4 {
 /* Cambiar el color de fondo del modal */
 #miModal {
   background-color: #00000013;
+  color: #fff;
 }
 .modal-footer{
   background-color: #000 !important;
+  color: #fff;
 }
 /* Cambiar el color del encabezado del modal */
 .modal-header {
@@ -657,6 +662,7 @@ h4 {
 /* Cambiar el tamaño de fuente del contenido del modal */
 .modal-body {
   background-color: #000;
+  color: #fff;
   font-size: 16px;
 }
 

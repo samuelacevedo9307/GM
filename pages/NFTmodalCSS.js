@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Headlanding from "@/Components/headlanding";
 import Footer from "@/Components/Footer";
 import WalletConnect from "@/Components/ConnectionWallet";
-import { _approveUsdt, _approveGm, _setTokensAtContract, _setAddressContractGmToken, _setAddressContractUsdtToken, _buyTokens, _widthdrawGmToken,_widthdrawUsdtToken, _getSupply, _getUsdtInContract, _getGmAddress, _getUsdtAddress, _getPricePerToken } from "../ConexionBlockchain/DispersionContractFunctions.js";
+import { _approveUsdt, _approveGm, _setTokensAtContract, _setAddressContractGmToken, _setAddressContractUsdtToken, _buyTokens, _widthdrawGmToken, _widthdrawUsdtToken, _getSupply, _getUsdtInContract, _getGmAddress, _getUsdtAddress, _getPricePerToken } from "../ConexionBlockchain/DispersionContractFunctions.js";
 import { useState, useEffect } from "react";
 import Images from "next/image";
 import Link from "next/link";
@@ -13,16 +13,37 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Nftmodal() {
   const [adressbool, setadressbool] = useState(false);
   const [mintbool, setmintbool] = useState(false);
+  //--------------comprar tokens---------------------
+  const [usdtvalue, setusdt] = useState(0);
+  const [gmvalue, setgm] = useState(0);
+  const [tokenprice, settokenprice] = useState(1);
   useEffect(() => {
-    var miModal = new bootstrap.Modal(document.getElementById("miModal"));
-    miModal.show();
+    async function loadData() {
+      const value = await GetPricePerToken();
+      settokenprice(parseInt(value));
+    }
+    loadData();
   }, []);
 
-  async function buyTokens() {
-    const result = await _buyTokens(100)
+  async function handlesubmit(e) {
+    e.preventDefault();
+    const res = await approveUsdt(parseInt(usdtvalue))
       .then((e) => {
         console.log(e);
-        
+        handleSuccessApprove();
+      })
+      .catch((e) => {
+        console.log(e.error);
+      });
+  }
+  const handleSuccessApprove = async () => {
+    const res = await buyTokens(parseInt(usdtvalue));
+  };
+
+  async function buyTokens(_value) {
+    const result = await _buyTokens(_value)
+      .then((e) => {
+        console.log(e);
       })
       .catch((e) => {
         console.log("Error = ", e);
@@ -32,7 +53,6 @@ export default function Nftmodal() {
     const result = await _approveUsdt(_value)
       .then((e) => {
         console.log(e);
-        
       })
       .catch((e) => {
         console.log("Error = ", e);
@@ -42,7 +62,6 @@ export default function Nftmodal() {
     const result = await _approveGm(_value)
       .then((e) => {
         console.log(e);
-        
       })
       .catch((e) => {
         console.log("Error = ", e);
@@ -148,11 +167,44 @@ export default function Nftmodal() {
       .catch((e) => {
         console.log("Error = ", e);
       });
+    return result;
   }
 
- 
   return (
     <>
+      <form className="compraGm" onSubmit={handlesubmit}>
+        <div>
+          <div className="gm1">
+            <p>Comprar GMCOINS</p>
+            <input
+              className="mb-4"
+              type="number"
+              placeholder={"USDT"}
+              value={usdtvalue}
+              onChange={(e) => {
+                setusdt(e.target.value);
+                setgm(e.target.value / tokenprice);
+              }}
+            ></input>
+            <input
+              readOnly
+              className=""
+              value={usdtvalue / tokenprice}
+              placeholder={usdtvalue / tokenprice}
+              on={(e) => {
+                setgm(e.target.value);
+              }}
+            ></input>
+
+            <p>Obtienes 100 GMC por 100USD</p>
+            <button type="submit" className="botonCompraGm">
+              Continuar
+            </button>
+
+            <a>Al continuar, aceptas nuestras politicas de uso</a>
+          </div>
+        </div>
+      </form>
       <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -165,25 +217,11 @@ export default function Nftmodal() {
             <div class="modal-body">
               {!adressbool && !mintbool ? (
                 <>
-                  <div className="compraGm">
-                    <div>
-                      <div className="gm1">
-                        <p>Comprar GMCOINS</p>
-                        <button>12850</button>
-                        <button>12850</button>
-                        <button>Obtienes 100 GMC por 100USD</button>
-                        <button className="botonCompraGm" onClick={buyTokens}>
-                          Continuar
-                        </button>
-                        <a>Al continuar, aceptas nuestras politicas de uso</a>
-                      </div>
-                    </div>
-                  </div>
                   <div className="modalNft">
                     <div className="modal1">
                       <img className="compra1" src="/images/NFT GM FINANCE.gif" alt="nft1" />
                       <h2>¡Gracias por Registrarte!</h2>
-                      <button >RECLAMAR</button>
+                      <button>RECLAMAR</button>
                       <img className="serp1" src="/images/serpentina.png" alt="serp1" />
                       <img className="serp2" src="/images/serpentina.png" alt="serp2" />
                     </div>
@@ -193,7 +231,7 @@ export default function Nftmodal() {
                       <br></br>
                       <h2>Set Address</h2>
                       <p>Send your wallet for mint</p>
-                      <button >Set</button>
+                      <button>Set</button>
                       <br></br>
                       <img className="serp1" src="/images/serpentina.png" alt="serp1" />
                       <img className="serp2" src="/images/serpentina.png" alt="serp2" />
@@ -224,7 +262,7 @@ export default function Nftmodal() {
                         <h2>Claim</h2>
                         <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/08/bored_ape_yacht_club.jpeg-1.jpg" width={130} alt="logotipo" />
                         <p>Get your Nft</p>
-                        <button >Mint</button>
+                        <button>Mint</button>
                       </div>
                     </div>
                   ) : (

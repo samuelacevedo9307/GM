@@ -1,14 +1,12 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { ENSAvatar } from "web3uikit";
 
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { useMoralis } from "react-moralis";
+
 
 export default function Sidebar() {
   const { data: session } = useSession();
-  const { chainId: chainIdHex, isWeb3Enabled, account } = useMoralis();
 
   /*
    *     Logica de la Web

@@ -1,13 +1,9 @@
 import Container from "@/Components/Container";
-
-import { ENSAvatar } from "web3uikit";
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { useMoralis } from "react-moralis";
 
 export default function Settings() {
   const { data: session } = useSession();
-  const { chainId: chainIdHex, isWeb3Enabled, account } = useMoralis();
   useEffect(() => {
     $(document).ready(function () {
       var currentActive = $(".active");

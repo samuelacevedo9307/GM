@@ -13,7 +13,7 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
 
 const contractGmToken = "0x8CA7aC87dE5D9DAf1A263cE5b844755B315A19F6";
 const contractUsdtToken = "0x7ef95a0FEE0Dd31b22626fA2e10Ee6A223F8a684";
-const dispersionGmToken = "0xFe759A98A13Ce505EB882b4920249C68b9727136";
+const dispersionGmToken = "0x8Ab670740a95De3fF00AD2F79e0a5D2Ab193256C";
 const contractAbiGmToken = abiGmToken.abi;
 const contractAbiUsdt = abiUsdtToken.abi;
 const contractAbiGmDispersion = abiGmDispersion.abi;
@@ -29,7 +29,7 @@ async function _approveUsdt(_value) {
   const gasPrice = await web3.eth.getGasPrice();
   console.log(gasPrice);
   const gasLimit = 5000000;
-  const result = await abiUsdt.methods.approve(contractUsdtToken, _value).send({from:accounts[0]});
+  const result = await abiUsdt.methods.approve(dispersionGmToken, _value).send({from:accounts[0]});
   return result;
 }
 async function _approveGm(_value) {
@@ -96,7 +96,7 @@ async function _buyTokens (_value){
   async function _getPricePerToken (){
     const accounts = await web3.eth.getAccounts();
     const result = await abiGmDisper.methods.getCurrentPrice().call();
-    return result/100
+    return parseInt(result)/100
   }
 
 

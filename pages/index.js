@@ -5,6 +5,7 @@ import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMi
 import { useSession } from "next-auth/react";
 import Headlanding from "@/Components/header.js";
 import Nftmodal from "@/Components/NFTmodal.js";
+import Dispersionmodal from "@/Components/Dispersionmodal.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,7 +55,7 @@ export default function Home() {
                     <div>
                       <h1>GMSOCIOS (GMS) </h1>
                       <p>Decidimos lanzar GMSOCIOS (GMS) como token de seguridad, para darle la oportunidad a las personas de participar en el crecimiento y éxito de nuestro ecosistema.</p>
-                      <button>Ofertar</button>
+                      <button data-bs-toggle="modal" data-bs-target="#comprar">Ofertar</button>
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
@@ -308,6 +309,7 @@ export default function Home() {
         </div>
       </div>
       <Nftmodal/>
+      <Dispersionmodal/>
     </div>
   );
 }
