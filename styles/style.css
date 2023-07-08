@@ -451,20 +451,15 @@ h3 {
   background-color: rgb(19, 19, 19);
   display: flex;
 }
-.tokenizar1,
+.blockchainPj {
+  position: absolute;
+  right: 100vh;
+}
 .tokenizar2 {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-}
-
-.tokenizar1 {
-  width: 400px;
-  height: 500px;
-  border-radius: 15px;
-  position: absolute;
-  left: 80px;
-  background-color: rgb(4, 30, 66);
 }
 .tokenizar2 {
   display: flex;
@@ -857,7 +852,14 @@ footer div {
 footer img {
   width: 300px;
 }
-
+form p {
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin:0px  !important;
+  padding:0px !important;
+}
 /* ---enlaces del footer ----*/
 
 .navegacion1 {
@@ -903,10 +905,9 @@ a input {
   text-align: center;
   border-radius: 15px;
 }
-
 /* ---------------------------------- responsive para resoluciones altas ------------------------------*/
 /* ---------------------------------- responsive mobile -----------------------------------------------*/
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 1020px) {
   /* Agrega tus estilos para resoluciones altas aquí */
   body {
     font-size: 100px;
@@ -932,6 +933,11 @@ a input {
   }
   .tokenizar1 {
     display: none !important;
+  }
+  .blockchainPj {
+  position: absolute;
+  right: 100px;
+  bottom:250px;
   }
 }
 @media only screen and (min-width: 280px) and (orientation: portrait) {
@@ -1031,14 +1037,6 @@ a input {
     align-items: center;
     justify-content: center;
     height: 200%;
-  }
-  .tokenizar1 {
-    display: none !important;
-    width: 300px;
-    position: static;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 80%;
   }
   .tokenizar2 {
     display: flex;

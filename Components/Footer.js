@@ -20,8 +20,8 @@ export default function Footer() {
         {/*-enlaces del footer*/}
         <div className="footer">
           <nav className="navegacion1">
-            <h2>Menu</h2>
-            <a href="#">tokenizacion</a>
+            <h2>Menú</h2>
+            <a href="#">Tokenizacion</a>
             <a href="#">Ranking</a>
             <a href="#">Preguntas Frecuentes</a>
             <a href="#">Conectar Wallet</a>
@@ -41,7 +41,9 @@ export default function Footer() {
           <form action="#" method="post">
             <input type="email" name="email" autoComplete="off" placeholder="Correo electronico" />
             <button>Suscribirse</button>
-            <p>Copyrigth 2020. All Rights Reserved</p>
+            <p>Powered by:
+              Contract.sol
+            </p>
           </form>
         </div>
       </footer>

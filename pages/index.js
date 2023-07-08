@@ -96,7 +96,7 @@ export default function Home() {
       <section className="section1">
         <img className="flecha2" src="/images/flech2.svg" alt="flechaPregunta2" />
         <img className="triagNeg2" src="/images/triag2.svg" alt="trianguloNegro" />
-        <h1>Ranking</h1>
+        <h1>RANKING</h1>
         <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
       </section>
       {/*------------seccion ranking-_-------------*/}
@@ -138,8 +138,13 @@ export default function Home() {
           <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
           <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
         </div>
+<<<<<<< Updated upstream
         <h1>Tokenización</h1>
         <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
+=======
+          <h1>TOKENIZACIÓN</h1>
+          <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
+>>>>>>> Stashed changes
       </section>
       <section className="section2">
         <div className="servicio1">
@@ -168,7 +173,8 @@ export default function Home() {
         <div className="tokenizar">
           <div className="tokenizar1"></div>
           <div className="tokenizar2">
-            <h1>Tokenizar</h1>
+            <img className="blockchainPj" src="/images/blockchainPj.png" alt="banner1" />
+            <h1>TOKENIZAR</h1>
             <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
             <button>Ver video</button>
           </div>
@@ -180,6 +186,7 @@ export default function Home() {
         <h1> PREGUNTAS FRECUENTES</h1>
         <div className="pregunta">
           <img className="flecha1" src="/images/flech1.svg" alt="flechaPregunta" />
+<<<<<<< Updated upstream
           <div>
             <div className="pregunta1">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
@@ -238,6 +245,72 @@ export default function Home() {
                 económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
               </p>
             </div>
+=======
+            <div>
+                <div className="pregunta1">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                  ¿Qué es GM Finance?
+                  </button>
+                  
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample4">
+                  <p>
+                  GM Finance es una plataforma DeFi Swap del sector descentralizado que se enfoca en la compra y venta de activos productivos que representan empresas del sector real.
+                  </p>
+                </div>
+                <div className="pregunta2">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                  ¿Cuál es la comisión que se cobra por cada transacción en GM Finance?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample5">
+                  <p>
+                  Se cobra una comisión del 1% del monto total de cada transacción realizada en la plataforma.
+                  </p>
+                </div>
+                <div className="pregunta3">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                  ¿Por qué algunas empresas requieren cumplir con procesos de Sarlaft o KYC?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample6">
+                  <p>
+                  Algunas empresas necesitan cumplir con procesos de Sarlaft (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo) o KYC (Conozca a su Cliente) para poder monetizar los recursos recaudados de manera legal y segura.
+                  </p>
+                </div>
+          </div>
+          <div>
+                <div className="pregunta4">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">
+                  ¿Qué beneficios adicionales se ofrecen a los usuarios que completan su información en la plataforma?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample7">
+                  <p>
+                  Los usuarios que completan su información en la plataforma recibirán un NFT de GM que les permitirá obtener beneficios dentro de la DAPP, como la reducción de costos de transacción.
+                  </p>
+                </div>
+                <div className="pregunta5">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample8" aria-expanded="false" aria-controls="multiCollapseExample8">
+                  ¿Qué es GM Holding?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample8">
+                  <p>
+                  GM Holding es un Holding empresarial que ofrece servicios de tokenización a empresas del sector real. GM Finance es una de las plataformas bajo GM Holding.
+                  </p>
+                </div>
+                <div className="pregunta6">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample9" aria-expanded="false" aria-controls="multiCollapseExample9">
+                  ¿Qué es GM BANK?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample9">
+                  <p>
+                  GM BANK es una Fintech del sector solidario que opera bajo las leyes solidarias de Colombia. Está supervisada por la Superintendencia de la Economía Solidaria de Colombia.
+                  </p>
+                </div>
+>>>>>>> Stashed changes
           </div>
         </div>
       </section>
