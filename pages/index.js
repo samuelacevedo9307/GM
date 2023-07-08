@@ -17,7 +17,7 @@ export default function Home() {
       {/*------seccion carousel---------*/}
       <main>
         <div className="banner">
-          <section className="section">
+          <section className="section" data-aos="zoom-out">
             <div>
               <h1>GMSOCIOS (GMS) </h1>
               <p>Decidimos lanzar GMSOCIOS (GMS) como token de seguridad, para darle la oportunidad a las personas de participar en el crecimiento y éxito de nuestro ecosistema.</p>
@@ -97,7 +97,7 @@ export default function Home() {
       {/*------------texto ranking-_-------------*/}
 
       {/*------------ Tokenizacion productos y servicios -------------*/}
-      <section id="section1" className="section1">
+      <section id="section1" className="section1" data-aos="fade-up">
         <div>
           <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
           <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
@@ -105,7 +105,7 @@ export default function Home() {
         <h1>TOKENIZACIÓN</h1>
         <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
       </section>
-      <section className="section2">
+      <section className="section2" data-aos="fade-up" data-aos-delay={200}>
         <div className="servicio1">
           <img className="" src="/images/icono_nft.svg" alt="flecha4" />
           <h4>GM NFT</h4>
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </section>
       {/*------------ video tokenizacion seccion 3 con imagen -------------*/}
-      <section className="section3">
+      <section className="section3" data-aos="fade-up">
         <div className="tokenizar">
           <div className="tokenizar1"></div>
           <div className="tokenizar2">
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/*-seccion inferior con article con preguntas frecuentes-*/}
-      <section id="inferior" className="inferior">
+      <section id="inferior" className="inferior" data-aos="zoom-out">
         <h1> PREGUNTAS FRECUENTES</h1>
         <div className="pregunta">
           <img className="flecha1" src="/images/flech1.svg" alt="flechaPregunta" />
@@ -203,7 +203,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div id="rankin" className="rankin">
+      <div id="rankin" className="rankin" data-aos="zoom-out">
         <section  className="section1">
           <img className="flecha2" src="/images/flech2.svg" alt="flechaPregunta2" />
           <img className="triagNeg2" src="/images/triag2.svg" alt="trianguloNegro" />
@@ -212,7 +212,7 @@ export default function Home() {
         </section>
         {/*------------seccion ranking-_-------------*/}
 
-        <section className="usuario">
+        <section className="usuario" >
           <div className="comentario1">
             <h2>GM Holding</h2>
             <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
