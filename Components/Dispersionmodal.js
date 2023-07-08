@@ -140,7 +140,7 @@ export default function Dispersionmodal() {
             options: {
               address: tokenAddress,
               symbol: tokenSymbol,
-              decimals: 18,
+              decimals: 3,
               image: '', // URL de la imagen del token si está disponible
             },
           },
