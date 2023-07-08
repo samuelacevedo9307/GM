@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import Headlanding from "@/Components/header.js";
 import Nftmodal from "@/Components/NFTmodal.js";
 import Dispersionmodal from "@/Components/Dispersionmodal.js";
+import Link from "next/link.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +25,10 @@ export default function Home() {
                 Comprar
               </button>
             </div>
+            <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
             <div className="imagenToken">
               <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
-              <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
+              
               <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
               <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
             </div>
@@ -93,58 +95,15 @@ export default function Home() {
         </div>
       </main>
       {/*------------texto ranking-_-------------*/}
-      <section className="section1">
-        <img className="flecha2" src="/images/flech2.svg" alt="flechaPregunta2" />
-        <img className="triagNeg2" src="/images/triag2.svg" alt="trianguloNegro" />
-        <h1>RANKING</h1>
-        <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
-      </section>
-      {/*------------seccion ranking-_-------------*/}
-      <section className="usuario">
-        <div className="comentario1">
-          <h2>GM Holding</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario2">
-          <h2>Coccoloba SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario3">
-          <h2>Kubitech SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario4">
-          <h2>Deko Bambu</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario5">
-          <h2>ID FACTORY SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario6">
-          <h2>Avante Jet SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-      </section>
+
       {/*------------ Tokenizacion productos y servicios -------------*/}
       <section className="section1">
         <div>
           <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
           <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
         </div>
-<<<<<<< Updated upstream
-        <h1>Tokenización</h1>
+        <h1>TOKENIZACIÓN</h1>
         <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
-=======
-          <h1>TOKENIZACIÓN</h1>
-          <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
->>>>>>> Stashed changes
       </section>
       <section className="section2">
         <div className="servicio1">
@@ -176,144 +135,117 @@ export default function Home() {
             <img className="blockchainPj" src="/images/blockchainPj.png" alt="banner1" />
             <h1>TOKENIZAR</h1>
             <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
-            <button>Ver video</button>
+            <Link href={`https://www.youtube.com/watch?v=-ToW3KvB9uM&t=18s`} className="glightbox btn-watch-video d-flex align-items-center" passHref legacyBehavior>
+              <a href="https://www.youtube.com/watch?v=-ToW3KvB9uM&t=18s" className="glightbox btn-watch-video d-flex align-items-center">
+                <button>Ver video</button>
+              </a>
+            </Link>
           </div>
         </div>
       </section>
+      
 
       {/*-seccion inferior con article con preguntas frecuentes-*/}
       <section className="inferior">
         <h1> PREGUNTAS FRECUENTES</h1>
         <div className="pregunta">
           <img className="flecha1" src="/images/flech1.svg" alt="flechaPregunta" />
-<<<<<<< Updated upstream
           <div>
             <div className="pregunta1">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
-                ¿Cómo funciona?
+                ¿Qué es GM Finance?
               </button>
             </div>
             <div className="collapse multi-collapse" id="multiCollapseExample4">
-              <p>
-                es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
-                económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
-              </p>
+              <p>GM Finance es una plataforma DeFi Swap del sector descentralizado que se enfoca en la compra y venta de activos productivos que representan empresas del sector real.</p>
             </div>
             <div className="pregunta2">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
-                ¿Cómo funciona?
+                ¿Cuál es la comisión que se cobra por cada transacción en GM Finance?
               </button>
             </div>
             <div className="collapse multi-collapse" id="multiCollapseExample5">
-              <p>
-                es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
-                económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
-              </p>
+              <p>Se cobra una comisión del 1% del monto total de cada transacción realizada en la plataforma.</p>
             </div>
             <div className="pregunta3">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
-                ¿Cómo funciona?
+                ¿Por qué algunas empresas requieren cumplir con procesos de Sarlaft o KYC?
               </button>
             </div>
             <div className="collapse multi-collapse" id="multiCollapseExample6">
-              <p>
-                es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
-                económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
-              </p>
+              <p>Algunas empresas necesitan cumplir con procesos de Sarlaft (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo) o KYC (Conozca a su Cliente) para poder monetizar los recursos recaudados de manera legal y segura.</p>
             </div>
           </div>
           <div>
             <div className="pregunta4">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">
-                ¿Cómo funciona?
+                ¿Qué beneficios adicionales se ofrecen a los usuarios que completan su información en la plataforma?
               </button>
             </div>
             <div className="collapse multi-collapse" id="multiCollapseExample7">
-              <p>
-                es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
-                económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
-              </p>
+              <p>Los usuarios que completan su información en la plataforma recibirán un NFT de GM que les permitirá obtener beneficios dentro de la DAPP, como la reducción de costos de transacción.</p>
             </div>
             <div className="pregunta5">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample8" aria-expanded="false" aria-controls="multiCollapseExample8">
-                ¿Cómo funciona?
+                ¿Qué es GM Holding?
               </button>
             </div>
             <div className="collapse multi-collapse" id="multiCollapseExample8">
-              <p>
-                es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
-                económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
-              </p>
+              <p>GM Holding es un Holding empresarial que ofrece servicios de tokenización a empresas del sector real. GM Finance es una de las plataformas bajo GM Holding.</p>
             </div>
-=======
-            <div>
-                <div className="pregunta1">
-                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
-                  ¿Qué es GM Finance?
-                  </button>
-                  
-                </div>
-                <div className="collapse multi-collapse" id="multiCollapseExample4">
-                  <p>
-                  GM Finance es una plataforma DeFi Swap del sector descentralizado que se enfoca en la compra y venta de activos productivos que representan empresas del sector real.
-                  </p>
-                </div>
-                <div className="pregunta2">
-                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
-                  ¿Cuál es la comisión que se cobra por cada transacción en GM Finance?
-                  </button>
-                </div>
-                <div className="collapse multi-collapse" id="multiCollapseExample5">
-                  <p>
-                  Se cobra una comisión del 1% del monto total de cada transacción realizada en la plataforma.
-                  </p>
-                </div>
-                <div className="pregunta3">
-                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
-                  ¿Por qué algunas empresas requieren cumplir con procesos de Sarlaft o KYC?
-                  </button>
-                </div>
-                <div className="collapse multi-collapse" id="multiCollapseExample6">
-                  <p>
-                  Algunas empresas necesitan cumplir con procesos de Sarlaft (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo) o KYC (Conozca a su Cliente) para poder monetizar los recursos recaudados de manera legal y segura.
-                  </p>
-                </div>
-          </div>
-          <div>
-                <div className="pregunta4">
-                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">
-                  ¿Qué beneficios adicionales se ofrecen a los usuarios que completan su información en la plataforma?
-                  </button>
-                </div>
-                <div className="collapse multi-collapse" id="multiCollapseExample7">
-                  <p>
-                  Los usuarios que completan su información en la plataforma recibirán un NFT de GM que les permitirá obtener beneficios dentro de la DAPP, como la reducción de costos de transacción.
-                  </p>
-                </div>
-                <div className="pregunta5">
-                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample8" aria-expanded="false" aria-controls="multiCollapseExample8">
-                  ¿Qué es GM Holding?
-                  </button>
-                </div>
-                <div className="collapse multi-collapse" id="multiCollapseExample8">
-                  <p>
-                  GM Holding es un Holding empresarial que ofrece servicios de tokenización a empresas del sector real. GM Finance es una de las plataformas bajo GM Holding.
-                  </p>
-                </div>
-                <div className="pregunta6">
-                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample9" aria-expanded="false" aria-controls="multiCollapseExample9">
-                  ¿Qué es GM BANK?
-                  </button>
-                </div>
-                <div className="collapse multi-collapse" id="multiCollapseExample9">
-                  <p>
-                  GM BANK es una Fintech del sector solidario que opera bajo las leyes solidarias de Colombia. Está supervisada por la Superintendencia de la Economía Solidaria de Colombia.
-                  </p>
-                </div>
->>>>>>> Stashed changes
+            <div className="pregunta6">
+              <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample9" aria-expanded="false" aria-controls="multiCollapseExample9">
+                ¿Qué es GM BANK?
+              </button>
+            </div>
+            <div className="collapse multi-collapse" id="multiCollapseExample9">
+              <p>GM BANK es una Fintech del sector solidario que opera bajo las leyes solidarias de Colombia. Está supervisada por la Superintendencia de la Economía Solidaria de Colombia.</p>
+            </div>
           </div>
         </div>
       </section>
+      <div className="rankin">
+        <section className="section1">
+          <img className="flecha2" src="/images/flech2.svg" alt="flechaPregunta2" />
+          <img className="triagNeg2" src="/images/triag2.svg" alt="trianguloNegro" />
+          <h1>RANKING</h1>
+          <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
+        </section>
+        {/*------------seccion ranking-_-------------*/}
+
+        <section className="usuario">
+          <div className="comentario1">
+            <h2>GM Holding</h2>
+            <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
+            <button>Ofertar</button>
+          </div>
+          <div className="comentario2">
+            <h2>Coccoloba SAS</h2>
+            <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
+            <button>Ofertar</button>
+          </div>
+          <div className="comentario3">
+            <h2>Kubitech SAS</h2>
+            <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
+            <button>Ofertar</button>
+          </div>
+          <div className="comentario4">
+            <h2>Deko Bambu</h2>
+            <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
+            <button>Ofertar</button>
+          </div>
+          <div className="comentario5">
+            <h2>ID FACTORY SAS</h2>
+            <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
+            <button>Ofertar</button>
+          </div>
+          <div className="comentario6">
+            <h2>Avante Jet SAS</h2>
+            <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
+            <button>Ofertar</button>
+          </div>
+        </section>
+      </div>
       <Footer />
       {/* Modal */}
       <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">

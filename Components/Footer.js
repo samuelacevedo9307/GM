@@ -1,4 +1,4 @@
-
+import Link from "next/link"
 
 
 export default function Footer() {
@@ -30,21 +30,33 @@ export default function Footer() {
         <div className="footer">
           <nav className="navegacion1">
             <h2>Social</h2>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+            <Link href={`https://web.facebook.com/TokenGMHolding`} passHref legacyBehavior>
+                    <a href="https://web.facebook.com/TokenGMHolding" >
+                      Facebook
+                    </a>
+                  </Link>
+                  <Link href={`https://www.instagram.com/gm_holding/?hl=es`} passHref legacyBehavior>
+                    <a href="https://www.instagram.com/gm_holding/?hl=es" >
+                      Instagram
+                    </a>
+                  </Link>
+                  <Link href={`https://twitter.com/GMHOLDING09`} passHref legacyBehavior>
+                    <a href="https://twitter.com/GMHOLDING09" >
+                      Twitter
+                    </a>
+                  </Link>
+                  <Link href={`https://wa.me/573128152713`} passHref legacyBehavior>
+                    <a href="https://wa.me/573128152713" >
+                     Whatsapp
+                    </a>
+                  </Link>
           </nav>
         </div>
         <div className="formulario">
-          <h2>Suscribirse a nuestro sitio</h2>
-          <form action="#" method="post">
-            <input type="email" name="email" autoComplete="off" placeholder="Correo electronico" />
-            <button>Suscribirse</button>
-            <p>Powered by:
-              Contract.sol
-            </p>
-          </form>
+
+          <Link href={`https://blockfy.app/`} passHref legacyBehavior >
+                  <p href="https://blockfy.app/" target="blank">powered by: Block<span>Fy</span></p>
+            </Link>
         </div>
       </footer>
       )
