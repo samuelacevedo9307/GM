@@ -11,9 +11,9 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
 
-const contractGmToken = "0x8CA7aC87dE5D9DAf1A263cE5b844755B315A19F6";
-const contractUsdtToken = "0x7ef95a0FEE0Dd31b22626fA2e10Ee6A223F8a684";
-const dispersionGmToken = "0x8Ab670740a95De3fF00AD2F79e0a5D2Ab193256C";
+const contractGmToken = "0x4F8bE821F36dbFf8065E893404065BcdFd1C100A";
+const contractUsdtToken = "0x55d398326f99059fF775485246999027B3197955";
+const dispersionGmToken = "0x8897D514E1F77afdE2e53d147Ae89B3Fa6699882";
 const contractAbiGmToken = abiGmToken.abi;
 const contractAbiUsdt = abiUsdtToken.abi;
 const contractAbiGmDispersion = abiGmDispersion.abi;

@@ -97,8 +97,8 @@ export default function Registro() {
       }
 
       alert("Usuario Creado Con Éxito");
-      var miModal = new bootstrap.Modal(document.getElementById('miModal'));
-      miModal.show();
+      //var miModal = new bootstrap.Modal(document.getElementById('miModal'));
+      //miModal.show();
     } catch (error) {
       console.log(error.message);
       alert("Error en la solicitud: " + error.message);

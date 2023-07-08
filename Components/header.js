@@ -40,10 +40,10 @@ export default function Headlanding() {
         await window.ethereum
           .request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: "0x61" }], // ID de la Testnet de Binance
+            params: [{ chainId: "0x38" }], // ID de la Testnet de Binance
           })
           .then(() => {
-            if (chainId != "97") {
+            if (chainId != "56") {
               location.reload();
             }
           });
