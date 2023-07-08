@@ -28,7 +28,7 @@ export default function Home() {
             <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
             <div className="imagenToken">
               <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
-              
+
               <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
               <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
       {/*------------texto ranking-_-------------*/}
 
       {/*------------ Tokenizacion productos y servicios -------------*/}
-      <section className="section1">
+      <section id="section1" className="section1">
         <div>
           <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
           <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
@@ -107,22 +107,22 @@ export default function Home() {
       </section>
       <section className="section2">
         <div className="servicio1">
-          <button></button>
+          <img className="" src="/images/icono_nft.svg" alt="flecha4" />
           <h4>GM NFT</h4>
           <p>¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!</p>
         </div>
         <div className="servicio2">
-          <button></button>
+          <img className="" src="/images/icono_daf.svg" alt="flecha4" />
           <h4>DAF</h4>
           <p>Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado).</p>
         </div>
         <div className="servicio3">
-          <button></button>
+          <img className="" src="/images/icono_oferta.svg" alt="flecha4" />
           <h4>OFERTAS</h4>
           <p>Las empresas emiten ofertas digitales para invitara personas de todo el mundo a ayudar a expandir sus negocios.</p>
         </div>
         <div className="servicio4">
-          <button></button>
+          <img className="" src="/images/icono_gmdex.svg" alt="flecha4" />
           <h4>GM DEX</h4>
           <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
         </div>
@@ -143,10 +143,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
 
       {/*-seccion inferior con article con preguntas frecuentes-*/}
-      <section className="inferior">
+      <section id="inferior" className="inferior">
         <h1> PREGUNTAS FRECUENTES</h1>
         <div className="pregunta">
           <img className="flecha1" src="/images/flech1.svg" alt="flechaPregunta" />
@@ -204,8 +203,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="rankin">
-        <section className="section1">
+      <div id="rankin" className="rankin">
+        <section  className="section1">
           <img className="flecha2" src="/images/flech2.svg" alt="flechaPregunta2" />
           <img className="triagNeg2" src="/images/triag2.svg" alt="trianguloNegro" />
           <h1>RANKING</h1>

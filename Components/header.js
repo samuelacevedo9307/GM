@@ -103,13 +103,16 @@ export default function Headlanding() {
             </div>
             <ul className="menu navbar-nav">
               <li>
-                <a href="#">tokenizacion</a>
+              <Link className="text-white" href={`#section1`} passHref legacyBehavior>
+              <a href="#section1">tokenizacion</a>
+                  </Link>
+                
               </li>
               <li>
-                <a href="#">Ranking</a>
+                <a href="#rankin">Ranking</a>
               </li>
               <li>
-                <a href="#">FAQ</a>
+                <a href="#inferior">FAQ</a>
               </li>
               {!isConnected ? (
                 <></>
@@ -131,9 +134,9 @@ export default function Headlanding() {
 
         <div></div>
         <nav className="menu">
-          <a href="#">tokenizacion</a>
-          <a href="#">Ranking</a>
-          <a href="#">FAQ</a>
+          <a href="#section1">tokenizacion</a>
+          <a href="#rankin">Ranking</a>
+          <a href="#inferior">FAQ</a>
           {!isConnected ? (
             <></>
           ) : (
