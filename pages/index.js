@@ -19,20 +19,21 @@ export default function Home() {
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <section className="section">
+                <section className="section">
                     <div>
-                      <h1>Empresas Tokenizadas</h1>
-                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                      <button>Ofertar</button>
+                      <h1>GMSOCIOS (GMS) </h1>
+                      <p>Decidimos lanzar GMSOCIOS (GMS) como token de seguridad, para darle la oportunidad a las personas de participar en el crecimiento y éxito de nuestro ecosistema.</p>
+                      <button data-bs-toggle="modal" data-bs-target="#comprar">Comprar</button>
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <img className="fondo" src="/images/ImgBanner1.svg" alt="banner1" />
+                      <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
                     </div>
                   </section>
+                  
                 </div>
                 <div class="carousel-item">
                   <section className="section">
@@ -51,15 +52,15 @@ export default function Home() {
                   </section>
                 </div>
                 <div class="carousel-item">
-                  <section className="section">
+                <section className="section">
                     <div>
-                      <h1>GMSOCIOS (GMS) </h1>
-                      <p>Decidimos lanzar GMSOCIOS (GMS) como token de seguridad, para darle la oportunidad a las personas de participar en el crecimiento y éxito de nuestro ecosistema.</p>
-                      <button data-bs-toggle="modal" data-bs-target="#comprar">Ofertar</button>
+                      <h1>Empresas Tokenizadas</h1>
+                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
+                      <button>Ofertar</button>
                     </div>
                     {/*-grafica lado derecho section*/}
                     <div className="imagenToken">
-                      <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
+                      <img className="fondo" src="/images/ImgBanner1.svg" alt="banner1" />
                       <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
                       <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
                       <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />

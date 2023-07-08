@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { _approveUsdt, _approveGm, _setTokensAtContract, _setAddressContractGmToken, _setAddressContractUsdtToken, _buyTokens, _widthdrawGmToken, _widthdrawUsdtToken, _getSupply, _getUsdtInContract, _getGmAddress, _getUsdtAddress, _getPricePerToken } from "../ConexionBlockchain/DispersionContractFunctions.js";
 import { useState, useEffect } from "react";
+import Web3 from "web3";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -122,6 +123,38 @@ export default function Dispersionmodal() {
         console.log("Error = ", e);
       });
   }
+  async function addtoken(){
+    if (window.ethereum) {
+      try {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const web3 = new Web3(window.ethereum);
+        const accounts = await web3.eth.getAccounts();
+    
+        const tokenAddress = '0x8CA7aC87dE5D9DAf1A263cE5b844755B315A19F6';
+        const tokenSymbol = 'GMS';
+    
+        const params = {
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: 18,
+              image: '', // URL de la imagen del token si está disponible
+            },
+          },
+        };
+    
+        await window.ethereum.request(params);
+      } catch (error) {
+        console.error('Error al conectar a Web3:', error);
+      }
+    } else {
+      console.error('Web3 no está disponible en este navegador.');
+    }
+    
+  }
   async function getGmTokenAddress() {
     const result = await _getGmAddress()
       .then((e) => {
@@ -195,8 +228,11 @@ export default function Dispersionmodal() {
               <button type="submit" className="botonCompraGm">
                 Continuar
               </button>
+              <button type="button" className="botonCompraGm" onClick={()=>{addtoken()}}>
+                añadir token a Metamask
+              </button>
 
-              <a>Al continuar, aceptas nuestras politicas de uso</a>
+              <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Al continuar, aceptas nuestras politicas de uso</a>
             </div>
           </div>
         </form>

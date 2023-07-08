@@ -18,7 +18,7 @@ function LoginPage() {
     if (!result.ok) {
       throw new Error(result.error);
     }
-    router.push("/dashboard");
+    router.push("/");
   }catch(error){
     console.log(error.message);
     alert("Error en la solicitud: " + error.message);

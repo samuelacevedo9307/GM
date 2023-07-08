@@ -25,18 +25,28 @@ export default function Headlanding() {
 
   const connectToWeb3 = async () => {
     if (window.ethereum) {
+      const web3 = new Web3(window.ethereum);
+      const chainId = await web3.eth.getChainId();
+      console.log("chainid " + chainId);
+
       try {
         await window.ethereum.request({ method: "eth_requestAccounts" });
-        const web3 = new Web3(window.ethereum);
+
         const accounts = await web3.eth.getAccounts();
         setAccount(accounts[0]);
         setConnected(true);
 
-        // Cambiar a la red de Mumbai
-        await window.ethereum.request({
-          method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x13881" }], // ID de la red de Mumbai
-        });
+        // Cambiar a la Testnet de Binance
+        await window.ethereum
+          .request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: "0x61" }], // ID de la Testnet de Binance
+          })
+          .then(() => {
+            if (chainId != "97") {
+              location.reload();
+            }
+          });
       } catch (error) {
         console.error("Error al conectar a Web3:", error);
       }
@@ -59,8 +69,6 @@ export default function Headlanding() {
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
-            
-
             <div className="col ">
               <div className="botonRegistro">
                 {session ? (
@@ -97,13 +105,17 @@ export default function Headlanding() {
               <li>
                 <a href="#">tokenizacion</a>
               </li>
-              <li><a href="#">Ranking</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li>
+                <a href="#">Ranking</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
               {!isConnected ? (
                 <></>
               ) : (
                 <>
-                  <Link className="text-white" href={`/dashboard`} passHref legacyBehavior>
+                  <Link className="text-white" href={`/`} passHref legacyBehavior>
                     <a href="#">dashboard</a>
                   </Link>
                 </>
@@ -126,7 +138,7 @@ export default function Headlanding() {
             <></>
           ) : (
             <>
-              <Link className="text-white" href={`/dashboard`} passHref legacyBehavior>
+              <Link className="text-white" href={`#`} passHref legacyBehavior>
                 <a href="#">dashboard</a>
               </Link>
             </>
