@@ -25,18 +25,28 @@ export default function Headlanding() {
 
   const connectToWeb3 = async () => {
     if (window.ethereum) {
+      const web3 = new Web3(window.ethereum);
+      const chainId = await web3.eth.getChainId();
+      console.log("chainid " + chainId);
+
       try {
         await window.ethereum.request({ method: "eth_requestAccounts" });
-        const web3 = new Web3(window.ethereum);
+
         const accounts = await web3.eth.getAccounts();
         setAccount(accounts[0]);
         setConnected(true);
 
-        // Cambiar a la red de Mumbai
-        await window.ethereum.request({
-          method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x13881" }], // ID de la red de Mumbai
-        });
+        // Cambiar a la Testnet de Binance
+        await window.ethereum
+          .request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: "0x38" }], // ID de la Testnet de Binance
+          })
+          .then(() => {
+            if (chainId != "56") {
+              location.reload();
+            }
+          });
       } catch (error) {
         console.error("Error al conectar a Web3:", error);
       }
@@ -53,8 +63,9 @@ export default function Headlanding() {
   return (
     <>
       <header>
-        <div  className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
+        <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
           <div className="offcanvas-header">
+
             <img src="/images/gm1b.png" alt="logotipo" width={300} />
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -91,6 +102,29 @@ export default function Headlanding() {
                 </div>
               </div>
             </div>
+            <ul className="menu navbar-nav">
+              <li>
+              <Link className="text-white" href={`#section1`} passHref legacyBehavior>
+              <a href="#section1">tokenizacion</a>
+                  </Link>
+                
+              </li>
+              <li>
+                <a href="#rankin">Ranking</a>
+              </li>
+              <li>
+                <a href="#inferior">FAQ</a>
+              </li>
+              {!isConnected ? (
+                <></>
+              ) : (
+                <>
+                  <Link className="text-white" href={`/`} passHref legacyBehavior>
+                    <a href="#">dashboard</a>
+                  </Link>
+                </>
+              )}
+            </ul>
           </div>
         </div>
 
@@ -104,11 +138,12 @@ export default function Headlanding() {
               <a href="#">Ranking</a>
               <a href="#">FAQ</a>
             </div>
+
           {!isConnected ? (
             <></>
           ) : (
             <>
-              <Link className="text-white" href={`/dashboard`} passHref legacyBehavior>
+              <Link className="text-white" href={`#`} passHref legacyBehavior>
                 <a href="#">dashboard</a>
               </Link>
             </>

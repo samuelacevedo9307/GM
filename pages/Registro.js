@@ -82,7 +82,7 @@ export default function Registro() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/singup", {
+      const response = await fetch("https://gmfinance.tech/api/auth/singup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -97,8 +97,8 @@ export default function Registro() {
       }
 
       alert("Usuario Creado Con Éxito");
-      var miModal = new bootstrap.Modal(document.getElementById('miModal'));
-      miModal.show();
+      //var miModal = new bootstrap.Modal(document.getElementById('miModal'));
+      //miModal.show();
     } catch (error) {
       console.log(error.message);
       alert("Error en la solicitud: " + error.message);

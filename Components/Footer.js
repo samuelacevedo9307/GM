@@ -1,22 +1,31 @@
-
-
+import Link from "next/link";
 
 export default function Footer() {
-    return(
+  return (
     <footer>
       <div>
         <img src="/images/gm1b.png" alt="logotipo" />
+
         <div className="redesSociales">
           <span className="redes">
-            <a href="#"><i className="fa-brands fa-square-facebook" /></a>
-            <a href="#"><i className="fa-brands fa-youtube" /></a>
-            <a href="#"><i className="fa-brands fa-twitter" /></a>
-            <a href="#"><i className="fa-brands fa-pinterest" /></a>
-            <a href="#"><i className="fa-brands fa-instagram" /></a>
+            <a href="#">
+              <i className="fa-brands fa-square-facebook" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-youtube" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-twitter" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-pinterest" />
+            </a>
+            <a href="#">
+              <i className="fa-brands fa-instagram" />
+            </a>
           </span>
         </div>
       </div>
-        
         {/*-enlaces del footer*/}
         <div className="footer">
           <nav className="navegacion1">
@@ -40,6 +49,6 @@ export default function Footer() {
           
         </div>
       </footer>
-      )
-
+     
+  );
 }
