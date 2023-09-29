@@ -5,78 +5,40 @@ import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMi
 import { useSession } from "next-auth/react";
 import Headlanding from "@/Components/header.js";
 import Nftmodal from "@/Components/NFTmodal.js";
+import _app from "@/pages/_app.js";
+import ServiceItem from "@/Components/ServiceItem.js";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+  
+
   return (
     <div>
       <Headlanding></Headlanding>
 
-      {/*------seccion carousel---------*/}
+      {/*------seccion ---------*/}
       <main>
-        <div className="banner">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <section className="section">
-                    <div>
+                <section className="section">
+                  <div className="description">
                       <h1>Empresas Tokenizadas</h1>
                       <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
                       <button>Ofertar</button>
-                    </div>
+                  </div>
                     {/*-grafica lado derecho section*/}
-                    <div className="imagenToken">
-                      <img className="fondo" src="/images/imgBanner1.svg" alt="banner1" />
-                      <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-                      <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-                      <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
+                  <div className="imagenToken">
+                      <div className="gmToken1"></div>
+                      <div className="gmToken2"></div>
+                      <div className="gmToken3"></div>
+                      <div className="gmToken4"></div>
+                      <div className="gmToken5"></div>
+                      <div className="gmToken6"></div>
                     </div>
                   </section>
-                </div>
-                <div class="carousel-item">
-                  <section className="section">
-                    <div>
-                      <h1>Empresas Tokenizadas</h1>
-                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                      <button>Ofertar</button>
-                    </div>
-                    {/*-grafica lado derecho section*/}
-                    <div className="imagenToken">
-                      <img className="fondo" src="/images/imgBanner2.png" alt="banner1" />
-                      <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-                      <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-                      <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
-                    </div>
-                  </section>
-                </div>
-                <div class="carousel-item">
-                  <section className="section">
-                    <div>
-                      <h1>Empresas Tokenizadas</h1>
-                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                      <button>Ofertar</button>
-                    </div>
-                    {/*-grafica lado derecho section*/}
-                    <div className="imagenToken">
-                      <img className="fondo" src="/images/imgBanner3.png" alt="banner1" />
-                      <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-                      <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-                      <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-              </a>
-              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-              </a>
-        </div>
+             
       </main>
       {/*-comienzo del articulo-*/}
       <section className="section1">
@@ -84,33 +46,29 @@ export default function Home() {
           <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
           <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
         </div>
-          <h1>Tokenización</h1>
+          <h1>Ranking</h1>
           <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
       </section>
       {/*-section segundo texto izquierda h3 -*/}
       {/*-section lado derecho con botones-*/}
       <section className="section2">
-        <div className="servicio1">
-          <button></button>
-          <h4>GM NFT</h4>
-          <p>¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!</p>
-        </div>
-        <div className="servicio2">
-          <button></button>
-          <h4>DAF</h4>
-          <p>Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado).</p>
-        </div>
-        <div className="servicio3">
-          <button></button>
-          <h4>OFERTAS</h4>
-          <p>Las empresas emiten ofertas digitales para invitara personas de todo el mundo a ayudar a expandir sus negocios.</p>
-        </div>
-        <div className="servicio4">
-          <button></button>
-          <h4>GM DEX</h4>
-          <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
-        </div>
-      </section>
+      <ServiceItem
+        title="GM NFT"
+        description="¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!"
+      />
+      <ServiceItem
+        title="DAF"
+        description="Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado)."
+      />
+      <ServiceItem
+        title="OFERTAS"
+        description="Las empresas emiten ofertas digitales para invitar a personas de todo el mundo a ayudar a expandir sus negocios."
+      />
+      <ServiceItem
+        title="GM DEX"
+        description="Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain. Podrás almacenar de forma segura en Metamask, Binance Wallet o Trust Wallet."
+      />
+    </section>
       {/*-grafica lado izquierdo section*/}
       <section className="section3">
         <div className="tokenizar">
@@ -123,72 +81,32 @@ export default function Home() {
         </div>
       </section>
       {/*-fin articulo y comienza nueva seccion*/}
-      <section className="usuario">
-        <div className="comentario1">
-          <h2>GM Holding</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario2">
-          <h2>Coccoloba SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario3">
-          <h2>Kubitech SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario4">
-          <h2>Deko Bambu</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario5">
-          <h2>ID FACTORY SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-        <div className="comentario6">
-          <h2>Avante Jet SAS</h2>
-          <p>"We have been able to cancel so many other subscriptions since using manage. There is no more croos-channel confusion and everyone is much more focused."</p>
-          <button>Ofertar</button>
-        </div>
-      </section>
+      
       {/*------------ video tokenizacion seccion 3-_-------------*/}
-      <section className="section3">
-        <div className="tokenizar">
-          <div className="tokenizar1"></div>
-          <div className="tokenizar2">
-            <h1>Tokenizar</h1>
-            <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
-            <button>Ver video</button>
-          </div>
-        </div>
-      </section>
+     
       {/*------------texto ranking-_-------------*/}
       <section className="section1">
-        <h1>Ranking</h1>
+        <h1>Tokenizacion</h1>
         <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
       </section>
-      {/*------------seccion ranking-_-------------*/}
-      <section className="section2">
-        <div className="servicio1">
+      {/*------------seccion TOKENIZACION-_-------------*/}
+      <section className="section4">
+        <div className="s41">
           <button></button>
           <h4>GM NFT</h4>
           <p>¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!</p>
         </div>
-        <div className="servicio2">
+        <div className="s42">
           <button></button>
           <h4>DAF</h4>
           <p>Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado).</p>
         </div>
-        <div className="servicio3">
+        <div className="s43">
           <button></button>
           <h4>OFERTAS</h4>
           <p>Las empresas emiten ofertas digitales para invitara personas de todo el mundo a ayudar a expandir sus negocios.</p>
         </div>
-        <div className="servicio4">
+        <div className="s44">
           <button></button>
           <h4>GM DEX</h4>
           <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
@@ -199,7 +117,7 @@ export default function Home() {
         <h1> PREGUNTAS FRECUENTES 
         </h1>
         <div className="pregunta">
-          <img className="flecha1" src="/images/flech1.svg" alt="flechaPregunta" />
+          
             <div>
                 <div className="pregunta1">
                   <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">

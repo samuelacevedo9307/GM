@@ -32,10 +32,10 @@ function LoginPage() {
       <div className="login-container">
         <div className="form_container mt-0">
           <h2>Accede a tu cuenta ahora</h2>
-          <form onSubmit={handleSubmit}>
+          <form className="login" onSubmit={handleSubmit}>
             <input placeholder="Email" type="email" name="email" required />
             <input placeholder="Password" type="password" name="password" required />
-            <button type="submit">Sign In</button>
+            <button type="submit">Conectar</button>
           </form>
           {/*<Link href="/recuperar-contrasena">Olvidaste tu contraseña?</Link>*/}
         </div>

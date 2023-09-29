@@ -5,7 +5,7 @@ export default function Footer() {
     return(
     <footer>
       <div>
-        <img src="/images/LogoGmFinance2.png" alt="logotipo" />
+        <img src="/images/gm1b.png" alt="logotipo" />
         <div className="redesSociales">
           <span className="redes">
             <a href="#"><i className="fa-brands fa-square-facebook" /></a>
@@ -28,7 +28,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="footer">
-          <nav className="navegacion1">
+          <nav className="navegacion2">
             <h2>Social</h2>
             <a href="#">Facebook</a>
             <a href="#">LinkedIn</a>
@@ -36,13 +36,8 @@ export default function Footer() {
             <a href="#">Twitter</a>
           </nav>
         </div>
-        <div className="formulario">
-          <h2>Suscribirse a nuestro sitio</h2>
-          <form action="#" method="post">
-            <input type="email" name="email" autoComplete="off" placeholder="Correo electronico" />
-            <button>Suscribirse</button>
-            <p>Copyrigth 2020. All Rights Reserved</p>
-          </form>
+        <div className="redes">
+          
         </div>
       </footer>
       )

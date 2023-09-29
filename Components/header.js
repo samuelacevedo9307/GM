@@ -14,14 +14,14 @@ export default function Headlanding() {
   const [isConnected, setConnected] = useState(false);
   const [account, setAccount] = useState("");
 
-  useEffect(() => {
+ /*/ useEffect(() => {
     connectToWeb3();
 
     // Función de limpieza
     return () => {
       disconnectFromWeb3();
     };
-  }, []);
+  }, []); /*/
 
   const connectToWeb3 = async () => {
     if (window.ethereum) {
@@ -55,7 +55,7 @@ export default function Headlanding() {
       <header>
         <div  className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight" data-bs-scroll="true" aria-labelledby="offcanvasRightLabel">
           <div className="offcanvas-header">
-            <img src="/images/LogoGmFinance.png" alt="logotipo" width={300} />
+            <img src="/images/gm1b.png" alt="logotipo" width={300} />
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
@@ -93,15 +93,17 @@ export default function Headlanding() {
             </div>
           </div>
         </div>
-        <Link className="text-white" href={`/`} passHref legacyBehavior>
-          <a><img src="/images/LogoGmFinance.png" alt="logotipo" /></a>
-        </Link>
 
-        <div></div>
+        
         <nav className="menu">
-          <a href="#">tokenizacion</a>
-          <a href="#">Ranking</a>
-          <a href="#">FAQ</a>
+          <Link className="text-white" href={`/`} passHref legacyBehavior>
+            <img src="/images/gm1b.png" alt="logotipo" />
+          </Link>
+            <div>
+              <a href="#">tokenizacion</a>
+              <a href="#">Ranking</a>
+              <a href="#">FAQ</a>
+            </div>
           {!isConnected ? (
             <></>
           ) : (
@@ -128,7 +130,7 @@ export default function Headlanding() {
             <button onClick={disconnectFromWeb3}>Desconectar</button>
             <div id="botonPrincipal">
               <button className="btn btn-primary" type="button" id="offcanvasToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-                <i class="bi bi-person-fill"></i>
+                <i className="bi bi-person-fill"></i>
               </button>
             </div>
           </>

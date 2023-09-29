@@ -106,21 +106,22 @@ export default function Registro() {
   };
   return (
     <>
+    <h2>Crea tu cuenta ahora</h2>
       <div className="registro-container">
         <div className="form_container mt-0">
-          <h2>Crea tu cuenta ahora</h2>
           <form onSubmit={handleSubmit}>
             <div>
               <div className="registro1">
-                <div className="form1">
+                <div >
                   <label>
-                    <i className="bi bi-envelope-plus"></i> Nombre completo:
+                    <i className=""></i> Nombre completo:
                   </label>
-                  <br />
+                  
                   <input type="text" id="name" name="name" value={name} onChange={(e) => setname(e.target.value)} />
                 </div>
-                  <br />
-                <div className="form1">
+                 
+                <div >
+                  <label>
                   <select className="" name="ti" placeholder="TI" value={ti} onChange={(e) => setti(e.target.value)}>
                     <option value="">TI</option>
                     <option value="CC">CC</option>
@@ -128,135 +129,132 @@ export default function Registro() {
                     <option value="CE">CE</option>
                     <option value="PA">PA</option>
                   </select>
-                  <label>
-                    <i className="bi bi-envelope-plus"></i> Número de identificación:
+                    <i className=""></i> Número de identificación:
                   </label>
-                  <br />
+                  
                   <input type="text" id="doc" name="doc" value={idnum} onChange={(e) => setidnum(e.target.value)} />
-                  <br />
+                 
                 </div>
               </div>
-            <div className="registro5">
+            <div className="registro2">
               <div>
-                <i className="bi bi-envelope-plus"></i> fecha de Nacimiento:
+                <i className="">Fecha de Nacimiento:</i> 
                 <input type="date" id="blockchain" name="blockchain" value={date} onChange={(e) => setdate(e.target.value)} />
               </div>
               <div>
-                <i className="bi bi-envelope-plus"></i> Nacionalidad:
-                <input type="text" id="blockchain" name="blockchain" value={nacion} onChange={(e) => setnacion(e.target.value)} />
+                <i className="">Nacionalidad:</i> 
+              
+                  <input type="text" id="blockchain" name="blockchain" value={nacion} onChange={(e) => setnacion(e.target.value)} />
               </div>
-                <br />
-            </div>
-            <div className="registro2">
-              <div>
-                <label>
-                  <i className="bi bi-envelope-plus"></i> Número de teléfono:
-                </label>
-                <br />
-                <input type="text" id="tel" name="tel" value={tel} onChange={(e) => settel(e.target.value)} />
-                <br />
-              </div>
-              <div>
-                <label>
-                  <i className="bi bi-envelope-plus"></i> Correo electrónico:
-                </label>
-                <br />
-                <input type="text" id="email" name="email" value={email} onChange={(e) => setemail(e.target.value)} />
-                <br />
-              </div>
+                
             </div>
             <div className="registro3">
               <div>
                 <label>
-                  <i className="bi bi-envelope-plus"></i> Contraseña:
+                  <i className="">Número de teléfono:</i> 
                 </label>
-                <br />
-                <input type="password" id="passw" name="passw" value={passw} onChange={(e) => setpassw(e.target.value)} />
-                <br />
+                
+                <input type="text" id="tel" name="tel" value={tel} onChange={(e) => settel(e.target.value)} />
+                
               </div>
               <div>
                 <label>
-                  <i className="bi bi-envelope-plus"></i> Confirmacion Contraseña:
+                  <i className="">Correo electrónico:</i> 
                 </label>
-                <br />
-                <input type="password" id="cpassw" name="cpassw" value={cpassw} onChange={(e) => setcpassw(e.target.value)} />
-                <br />
+                
+                <input type="text" id="email" name="email" value={email} onChange={(e) => setemail(e.target.value)} />
+                
               </div>
             </div>
             <div className="registro4">
               <div>
                 <label>
-                  <i className="bi bi-envelope-plus"></i> Ocupación o profesión:
+                  <i className="">Contraseña:</i> 
                 </label>
-                <br />
-                <input type="text" id="ocupacion" name="ocupacion" value={prof} onChange={(e) => setprof(e.target.value)} />
-                <br />
+                
+                <input type="password" id="passw" name="passw" value={passw} onChange={(e) => setpassw(e.target.value)} />
+                
               </div>
               <div>
                 <label>
-                  <i className="bi bi-envelope-plus"></i> Origen de fondos:
+                  <i className="">Confirmacion Contraseña:</i> 
                 </label>
-                <br />
+                
+                <input type="password" id="cpassw" name="cpassw" value={cpassw} onChange={(e) => setcpassw(e.target.value)} />
+                
+              </div>
+            </div>
+            <div className="registro5">
+              <div>
+                <label>
+                  <i className="">Ocupación o profesión:</i> 
+                </label>
+                
+                <input type="text" id="ocupacion" name="ocupacion" value={prof} onChange={(e) => setprof(e.target.value)} />
+                
+              </div>
+              <div>
+                <label>
+                  <i className="">Origen de fondos:</i> 
+                </label>
+                
                 <input type="text" id="fondos" name="fondos" value={fondos} onChange={(e) => setfondos(e.target.value)} />
               </div>
             </div>
-            <div className="registro4">
-              <div>
-                <br />
-                <label>
-                  <i className="bi bi-envelope-plus"></i> Fuente de ingresos:
-                </label>
-                <br />
-                <input type="text" id="ingresos" name="ingresos" value={ingr} onChange={(e) => setingr(e.target.value)} />
-              </div>
-              <div>
-                <br />
-                <label>
-                  <i className="bi bi-envelope-plus"></i> Procedencia de los fondos:
-                </label>
-                <br />
-                <input type="text" id="pfondos" name="pfondos" value={pfondos} onChange={(e) => setpfondos(e.target.value)} />
-              </div>
-            </div>
-              <div>
+              <div className="registro6">
+                <div>
                   
-              </div>
-                <div className="boolean">
-                  <div className="boolean">
-                    <br />
                   <label>
-                    <p type="button">Conocimiento en criptomonedas y tecnología blockchain:</p>
+                    <i className="">Fuente de ingresos:</i> 
                   </label>
-                  <input type="checkbox" checked={block} onChange={(e) => setblock(e.target.checked)} />
-                      <br />
-                    <label>
-                      <p type="button"> Declaración de veracidad:</p>
-                      <input type="checkbox" checked={ver} onChange={(e) => setver(e.target.checked)} />
-                      <span className="checkmark"></span>
-                    </label>
-                      <br />
-                    <label>
-                      <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Acepto las política de tratamiento de datos personales: &nbsp;&nbsp;&nbsp;&nbsp;
-                      </p>
-                      <input type="checkbox" checked={aceptaTratamientoDatos} onChange={(e) => setAceptaTratamientoDatos(e.target.checked)} />
-                      <span className="checkmark"></span>
-                    </label>
-                    <br />
-                    <label>
-                      <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                        Acepto los términos y condiciones: &nbsp;&nbsp;&nbsp;&nbsp;
-                      </p>
-                      <input type="checkbox" checked={aceptaTerminosCondiciones} onChange={(e) => setAceptaTerminosCondiciones(e.target.checked)} />
-                      <span className="checkmark"></span>
-                    </label>
-                    <br />
-                  </div>
+                  
+                  <input type="text" id="ingresos" name="ingresos" value={ingr} onChange={(e) => setingr(e.target.value)} />
+                </div>
+                <div>
+                  
+                  <label>
+                    <i className="">Procedencia de los fondos:</i> 
+                  </label>
+                 
+                  <input type="text" id="pfondos" name="pfondos" value={pfondos} onChange={(e) => setpfondos(e.target.value)} />
                 </div>
               </div>
-            <button  className="botonSubmit" type="submit">submit</button>
+            </div>
           </form>
         </div>
+      </div>
+      <div className="boolean">
+          <div className="boolean">
+            <br />
+          <label>
+            <p type="button">Conocimiento en criptomonedas y tecnología blockchain:</p>
+          </label>
+          <input type="checkbox" checked={block} onChange={(e) => setblock(e.target.checked)} />
+              <br />
+            <label>
+              <p type="button"> Declaración de veracidad:</p>
+              <input type="checkbox" checked={ver} onChange={(e) => setver(e.target.checked)} />
+              <span className="checkmark"></span>
+            </label>
+              <br />
+            <label>
+              <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Acepto las política de tratamiento de datos personales: &nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+              <input type="checkbox" checked={aceptaTratamientoDatos} onChange={(e) => setAceptaTratamientoDatos(e.target.checked)} />
+              <span className="checkmark"></span>
+            </label>
+            <br />
+            <label>
+              <p type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Acepto los términos y condiciones:
+              </p>
+              <input type="checkbox" checked={aceptaTerminosCondiciones} onChange={(e) => setAceptaTerminosCondiciones(e.target.checked)} />
+              <span className="checkmark"></span>
+            </label>
+            <br />
+          </div>
+          <button  className="botonSubmit" type="submit">Registrar</button>
       </div>
     </>
   );
