@@ -5,94 +5,40 @@ import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMi
 import { useSession } from "next-auth/react";
 import Headlanding from "@/Components/header.js";
 import Nftmodal from "@/Components/NFTmodal.js";
-import Dispersionmodal from "@/Components/Dispersionmodal.js";
-import Link from "next/link.js";
+import _app from "@/pages/_app.js";
+import ServiceItem from "@/Components/ServiceItem.js";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+  
+
   return (
     <div>
       <Headlanding></Headlanding>
-      {/*------seccion carousel---------*/}
-      <main>
-        <div className="banner">
-          <section className="section" data-aos="zoom-out">
-            <div>
-              <h1>GMSOCIOS (GMS) </h1>
-              <p>Decidimos lanzar GMSOCIOS (GMS) como token de seguridad, para darle la oportunidad a las personas de participar en el crecimiento y éxito de nuestro ecosistema.</p>
-              <button data-bs-toggle="modal" data-bs-target="#comprar">
-                Comprar
-              </button>
-            </div>
-            <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-            <div className="imagenToken">
-              <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
 
-              <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-              <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
-            </div>
-          </section>
-          {/*<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
+
+      {/*------seccion ---------*/}
+      <main>
                 <section className="section">
-                    <div>
-                      <h1>GMSOCIOS (GMS) </h1>
-                      <p>Decidimos lanzar GMSOCIOS (GMS) como token de seguridad, para darle la oportunidad a las personas de participar en el crecimiento y éxito de nuestro ecosistema.</p>
-                      <button data-bs-toggle="modal" data-bs-target="#comprar">Comprar</button>
-                    </div>
-                    <div className="imagenToken">
-                      <img className="fondo" src="/images/ImgBanner3.svg" alt="banner3" />
-                      <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-                      <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-                      <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
-                    </div>
-                  </section>
-                  
-                </div>
-                <div class="carousel-item">
-                  <section className="section">
-                    <div>
+                  <div className="description">
                       <h1>Empresas Tokenizadas</h1>
                       <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
                       <button>Ofertar</button>
-                    </div>
-                    <div className="imagenToken">
-                      <img className="fondo" src="/images/ImgBanner2.svg" alt="banner2" />
-                      <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-                      <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-                      <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
-                    </div>
-                  </section>
-                </div>
-                <div class="carousel-item">
-                <section className="section">
-                    <div>
-                      <h1>Empresas Tokenizadas</h1>
-                      <p>¡Obtenga acceso a los Activos Productivos Tokenizados y obtenga ganancias al ayudar a expandir empresas sólidas y confiables!</p>
-                      <button>Ofertar</button>
-                    </div>
-                    <div className="imagenToken">
-                      <img className="fondo" src="/images/ImgBanner1.svg" alt="banner1" />
-                      <img className="flechaToken" src="/images/flech4.svg" alt="flecha4" />
-                      <img className="triagVer" src="/images/triag5.svg" alt="trianguloVerde" />
-                      <img className="triagRos" src="/images/triag4.svg" alt="romboRosa" />
+                  </div>
+                    {/*-grafica lado derecho section*/}
+                  <div className="imagenToken">
+                      <div className="gmToken1"></div>
+                      <div className="gmToken2"></div>
+                      <div className="gmToken3"></div>
+                      <div className="gmToken4"></div>
+                      <div className="gmToken5"></div>
+                      <div className="gmToken6"></div>
                     </div>
                   </section>
-                </div>
-              </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-              </a>
-              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-              </a>
-              */}
-        </div>
+             
       </main>
       {/*------------texto ranking-_-------------*/}
 
@@ -102,78 +48,118 @@ export default function Home() {
           <img className="triagNeg" src="/images/triag2.svg" alt="trianguloNegro" />
           <img className="flecha3" src="/images/flech3.svg" alt="flechaRanking" />
         </div>
-        <h1>TOKENIZACIÓN</h1>
-        <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
+
+          <h1>Ranking</h1>
+          <h2>Los Tokens Corporativos son una forma digital de acceder a los productos y servicios de las empresas.</h2>
       </section>
-      <section className="section2" data-aos="fade-up" data-aos-delay={200}>
-        <div className="servicio1">
-          <img className="" src="/images/icono_nft.svg" alt="flecha4" />
-          <h4>GM NFT</h4>
-          <p>¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!</p>
-        </div>
-        <div className="servicio2">
-          <img className="" src="/images/icono_daf.svg" alt="flecha4" />
-          <h4>DAF</h4>
-          <p>Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado).</p>
-        </div>
-        <div className="servicio3">
-          <img className="" src="/images/icono_oferta.svg" alt="flecha4" />
-          <h4>OFERTAS</h4>
-          <p>Las empresas emiten ofertas digitales para invitara personas de todo el mundo a ayudar a expandir sus negocios.</p>
-        </div>
-        <div className="servicio4">
-          <img className="" src="/images/icono_gmdex.svg" alt="flecha4" />
-          <h4>GM DEX</h4>
-          <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
-        </div>
-      </section>
-      {/*------------ video tokenizacion seccion 3 con imagen -------------*/}
-      <section className="section3" data-aos="fade-up">
+      {/*-section segundo texto izquierda h3 -*/}
+      {/*-section lado derecho con botones-*/}
+      <section className="section2">
+      <ServiceItem
+        title="GM NFT"
+        description="¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!"
+      />
+      <ServiceItem
+        title="DAF"
+        description="Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado)."
+      />
+      <ServiceItem
+        title="OFERTAS"
+        description="Las empresas emiten ofertas digitales para invitar a personas de todo el mundo a ayudar a expandir sus negocios."
+      />
+      <ServiceItem
+        title="GM DEX"
+        description="Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain. Podrás almacenar de forma segura en Metamask, Binance Wallet o Trust Wallet."
+      />
+    </section>
+      {/*-grafica lado izquierdo section*/}
+      <section className="section3">
+
         <div className="tokenizar">
           <div className="tokenizar1"></div>
           <div className="tokenizar2">
             <img className="blockchainPj" src="/images/blockchainPj.png" alt="banner1" />
             <h1>TOKENIZAR</h1>
             <h2>Las empresas que cuentan con una estructura legal pueden emitir tokens de activos productivos, que pueden ser adquiridos por los usuarios para ayudar a financiar sus procesos y realizar inversiones seguras.</h2>
-            <Link href={`https://www.youtube.com/watch?v=-ToW3KvB9uM&t=18s`} className="glightbox btn-watch-video d-flex align-items-center" passHref legacyBehavior>
-              <a href="https://www.youtube.com/watch?v=-ToW3KvB9uM&t=18s" className="glightbox btn-watch-video d-flex align-items-center">
-                <button>Ver video</button>
-              </a>
-            </Link>
+
+            <button>Ver video</button>
           </div>
         </div>
       </section>
-
-      {/*-seccion inferior con article con preguntas frecuentes-*/}
-      <section id="inferior" className="inferior" data-aos="zoom-out">
-        <h1> PREGUNTAS FRECUENTES</h1>
+      {/*-fin articulo y comienza nueva seccion*/}
+      
+      {/*------------ video tokenizacion seccion 3-_-------------*/}
+     
+      {/*------------texto ranking-_-------------*/}
+      <section className="section1">
+        <h1>Tokenizacion</h1>
+        <h2>Los tokens productivos están vinculados a la facturación de empresas de diferentes sectores que ofrecen productos o servicios probados y validados en el mercado.</h2>
+      </section>
+      {/*------------seccion TOKENIZACION-_-------------*/}
+      <section className="section4">
+        <div className="s41">
+          <button></button>
+          <h4>GM NFT</h4>
+          <p>¡Al apoyar financieramente a empresas tokenizadas, los usuarios pueden obtener NFT de GM como recompensa!</p>
+        </div>
+        <div className="s42">
+          <button></button>
+          <h4>DAF</h4>
+          <p>Un token corporativo está vinculado a un DAF (Fondo Autónomo Descentralizado).</p>
+        </div>
+        <div className="s43">
+          <button></button>
+          <h4>OFERTAS</h4>
+          <p>Las empresas emiten ofertas digitales para invitara personas de todo el mundo a ayudar a expandir sus negocios.</p>
+        </div>
+        <div className="s44">
+          <button></button>
+          <h4>GM DEX</h4>
+          <p>Las Fichas Corporativas están construidas en la red principal de Binance Smart Chain Podrás Almacenar de forma seguran Metamask, Binance Wallet o Trust Wallet</p>
+        </div>
+      </section>
+      {/*-seccion inferior con article-*/}
+      <section className="inferior">
+        <h1> PREGUNTAS FRECUENTES 
+        </h1>
         <div className="pregunta">
-          <img className="flecha1" src="/images/flech1.svg" alt="flechaPregunta" />
-          <div>
-            <div className="pregunta1">
-              <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
-                ¿Qué es GM Finance?
-              </button>
-            </div>
-            <div className="collapse multi-collapse" id="multiCollapseExample4">
-              <p>GM Finance es una plataforma DeFi Swap del sector descentralizado que se enfoca en la compra y venta de activos productivos que representan empresas del sector real.</p>
-            </div>
-            <div className="pregunta2">
-              <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
-                ¿Cuál es la comisión que se cobra por cada transacción en GM Finance?
-              </button>
-            </div>
-            <div className="collapse multi-collapse" id="multiCollapseExample5">
-              <p>Se cobra una comisión del 1% del monto total de cada transacción realizada en la plataforma.</p>
-            </div>
-            <div className="pregunta3">
-              <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
-                ¿Por qué algunas empresas requieren cumplir con procesos de Sarlaft o KYC?
-              </button>
-            </div>
-            <div className="collapse multi-collapse" id="multiCollapseExample6">
-              <p>Algunas empresas necesitan cumplir con procesos de Sarlaft (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo) o KYC (Conozca a su Cliente) para poder monetizar los recursos recaudados de manera legal y segura.</p>
-            </div>
+          
+            <div>
+                <div className="pregunta1">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                    ¿Cómo funciona?
+                  </button>
+                  
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample4">
+                  <p>
+                    es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
+                    económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
+                  </p>
+                </div>
+                <div className="pregunta2">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">
+                    ¿Cómo funciona?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample5">
+                  <p>
+                    es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
+                    económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
+                  </p>
+                </div>
+                <div className="pregunta3">
+                  <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">
+                    ¿Cómo funciona?
+                  </button>
+                </div>
+                <div className="collapse multi-collapse" id="multiCollapseExample6">
+                  <p>
+                    es una sociedad legalmente constituida bajo las leyes de la República de Colombia cuyo objetivo es la realización de operaciones no reguladas por la Superintendencia Financiera a través de la operación de activos intangibles suscpetibles de valoración económica. A través de Invermint podrás obtener asesoría técnica para la obtención de información educativa en la que se podrán ejecutar actividades de tokenización de toda clase de bienes, especialmente, proyectos de valoración
+                    económica como por ejemplo proyectos inmobiliarios. Las operaciones de Invermint están respaldadas a nivel contractual y están reguladas por la legislación mercantil, especialmente, para la suscripción de contratos atípicos e innominados en las que se ejecutarán actividades relacionadas con operaciones de inversión diferentes a las bursátiles, de seguros o reguladas por la Superintendencia Financiera.
+                  </p>
+                </div>
+
           </div>
           <div>
             <div className="pregunta4">

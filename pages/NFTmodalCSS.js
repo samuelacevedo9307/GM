@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Headlanding from "@/Components/headlanding";
+import Headlanding from "@/Components/Headlanding.js";
 import Footer from "@/Components/Footer";
 import WalletConnect from "@/Components/ConnectionWallet";
 import { _approveUsdt, _approveGm, _setTokensAtContract, _setAddressContractGmToken, _setAddressContractUsdtToken, _buyTokens, _widthdrawGmToken, _widthdrawUsdtToken, _getSupply, _getUsdtInContract, _getGmAddress, _getUsdtAddress, _getPricePerToken } from "../ConexionBlockchain/DispersionContractFunctions.js";

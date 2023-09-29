@@ -67,6 +67,106 @@ export default function Home() {
     <Container>
       <section id="dash">
         <canvas id="myChart"></canvas>
+        
+        <form>
+            <div>
+              <div className="">
+                <div >
+                  <label>
+                    <i className="">Nombre completo:</i> 
+                  </label>
+                  
+                  <input />
+                </div>
+                 
+                <div >
+                  <label>
+                  <select className="" >
+                    <option value="">TI</option>
+                    <option value="CC">CC</option>
+                    <option value="NIT">NIT</option>
+                    <option value="CE">CE</option>
+                    <option value="PA">PA</option>
+                  </select>
+                    <i className=""></i> Número de identificación:
+                  </label>
+                  
+                  <input />
+                 
+                </div>
+              </div>
+            <div className="">
+              <div>
+                <i className="">fecha de Nacimiento:</i> 
+                <input />
+              </div>
+              <div>
+                <i className="">Nacionalidad:</i> 
+              
+                <input />
+              </div>
+                
+            </div>
+            <div className="">
+              <div>
+                <label>
+                  <i className="">Número de teléfono:</i> 
+                </label>
+                <input />
+              </div>
+              <div>
+                <label>
+                  <i className="">Correo electrónico:</i> 
+                </label>
+                <input />
+              </div>
+            </div>
+            <div className="">
+              <div>
+                <label>
+                  <i className="">Contraseña:</i> 
+                </label>
+                <input />
+              </div>
+              <div>
+                <label>
+                  <i className="">Confirmacion Contraseña:</i> 
+                </label>
+                
+                <input />
+                
+              </div>
+            </div>
+            <div className="">
+              <div>
+                  <label>
+                    <i className="">Ocupación o profesión:</i> 
+                  </label>
+                  <input />
+              </div>
+              <div>
+                <label>
+                  <i className="">Origen de fondos:</i> 
+                </label>
+                <input />
+              </div>
+            </div>
+              <div className="">
+                <div>
+                  <label>
+                    <i className="">Fuente de ingresos:</i> 
+                  </label>
+                  <input />
+                </div>
+                <div>
+                  <label>
+                    <i className="">Procedencia de los fondos:</i> 
+                  </label>
+                  <input />
+                </div>
+              </div>
+            </div>
+          </form>
       </section>
     </Container>
   );

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Headlanding from "@/Components/headlanding";
 import Footer from "@/Components/Footer";
 import WalletConnect from "@/Components/ConnectionWallet";
 import { _mintNFT, _setActive, _getwalletTokens, _getTokenMeta, _setAddressForMint, _getMinters } from "./FunctionsContract.js";

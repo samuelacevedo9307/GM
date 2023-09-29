@@ -30,7 +30,7 @@ export default function Sidebar() {
               </>
             )}
           </div>
-          <div className=" align-items-center mt-5 justify-content-center">
+          <div id="dash1" className=" align-items-center mt-5 justify-content-center">
             <li className="mb-2 dash nav-link .active">
               <Link href="/dashboard" passHref legacyBehavior>
                 <a href="">

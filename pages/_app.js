@@ -1,16 +1,21 @@
 import "@/styles/style.css";
 import { SessionProvider } from "next-auth/react";
 import "@/node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Mainjs from "@/Components/main";
+
+import "@/node_modules/bootstrap-icons/font/bootstrap-icons.css" ;
+import { MoralisProvider } from "react-moralis";
+import $ from "jquery";
 import { useEffect } from "react";
-import "@/node_modules/bootstrap-icons/font/bootstrap-icons.css";
-import 'glightbox/dist/css/glightbox.min.css';
-import "aos/dist/aos.css";
+import "@/node_modules/font-awesome/css/font-awesome.min.css"
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    Mainjs();
-  });
+
+  useEffect (()=> {
+    $(".toggleMenu").on ('click', function(){
+      $("#mainMenu").toggleClass ('open');
+    });
+  },[]);
+
   return (
     <>
       <SessionProvider session={pageProps.session}>
